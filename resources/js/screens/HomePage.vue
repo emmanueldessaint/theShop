@@ -1,13 +1,14 @@
 <template> 
    <div>
-       
+       <v-btn class="ml-2  btn-header" @click="() => this.$router.push('products')">
+        Products
+      </v-btn>
    </div>
 </template>
 
 <script>
-import AppNavigator from '../components/AppNavigator.vue'
+
  export default {
-  components: { AppNavigator, },
     
   }
 </script>

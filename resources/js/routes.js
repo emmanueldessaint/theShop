@@ -1,4 +1,5 @@
 import HomePage from './screens/HomePage'
+import Products from './components/Products'
 
 
 
@@ -8,6 +9,11 @@ export default {
         {
             path:'/',
             component: HomePage
-        },       
+        },    
+        
+        {
+            path:'/products',
+            component: Products
+        },    
     ]
 }
