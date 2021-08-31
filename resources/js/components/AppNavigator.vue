@@ -11,9 +11,20 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn icon>
-        <v-icon>mdi-export</v-icon>
+    <div class="menu">
+      <v-btn>
+        Home
       </v-btn>
+      <v-btn>
+        Products
+      </v-btn>
+      <v-btn>
+        About
+      </v-btn>
+      <v-btn>
+        Contact
+      </v-btn>
+    </div>
     </v-toolbar>
   </div>
 </template>

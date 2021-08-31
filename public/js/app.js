@@ -1865,6 +1865,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -38430,9 +38441,17 @@ var render = function() {
           _c("v-spacer"),
           _vm._v(" "),
           _c(
-            "v-btn",
-            { attrs: { icon: "" } },
-            [_c("v-icon", [_vm._v("mdi-export")])],
+            "div",
+            { staticClass: "menu" },
+            [
+              _c("v-btn", [_vm._v("\n      Home\n    ")]),
+              _vm._v(" "),
+              _c("v-btn", [_vm._v("\n      Products\n    ")]),
+              _vm._v(" "),
+              _c("v-btn", [_vm._v("\n      About\n    ")]),
+              _vm._v(" "),
+              _c("v-btn", [_vm._v("\n      Contact\n    ")])
+            ],
             1
           )
         ],
