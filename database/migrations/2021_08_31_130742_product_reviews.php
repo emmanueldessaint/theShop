@@ -17,6 +17,7 @@ class ProductReviews extends Migration
             $table->id();
             $table->unsignedBigInteger('id_product');
             $table->foreign('id_product')->references('id')->on('products');
+            $table->string('note');
             $table->string('title');
             $table->text('description');
             $table->timestamps();
