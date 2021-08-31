@@ -4,7 +4,7 @@
   <v-container>
     <v-row class="d-flex">
       <v-col v-for="product in products" :key="product" class="oneProduct" >
-        <v-card>
+        <v-card v-on:click="getOneProduct(product.id)">
           {{ product.name }}
         </v-card>
         
@@ -21,11 +21,7 @@ export default {
     data: function() {
         return {
             products: [],
-            alignments: [
-        'start',
-        'center',
-        'end',
-      ],
+            oneProduct: '',
         }
     },
     methods: {
@@ -38,6 +34,14 @@ export default {
                 }
             })
         },
+
+        getOneProduct(id) {
+          axios.store('http://localhost:8000/api/products/'+id).then(response => {
+                if(response.status >= 200 && response.status < 300 ){
+                    this.$router.push('oneproduct')
+                }
+            })
+        }
        
     },
 
