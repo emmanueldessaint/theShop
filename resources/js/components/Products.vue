@@ -1,7 +1,7 @@
 <template> 
 <div>
     
-  <v-container>
+  <v-container class="contenu">
     <v-row class="d-flex">
       <v-col v-for="product in products" :key="product" class="oneProduct" >
         <v-card v-on:click="()=> $router.push({name : 'OneProduct', params: {product}})">
@@ -53,11 +53,14 @@ export default {
 </script>
 
 <style scoped>
+.contenu{
+  margin-top:200px;
+}
 .oneProduct{
     min-width:300px;
     height:200px;
     /* height:300px; */
-    background-color: rgb(233, 234, 235);
+    /* background-color: rgb(233, 234, 235); */
     margin:20px;
     border-radius:7px;
 }

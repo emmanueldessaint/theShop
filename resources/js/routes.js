@@ -2,6 +2,7 @@ import HomePage from './screens/HomePage'
 import Products from './components/Products'
 import OneProduct from './components/OneProduct'
 import AppNavigator from './components/AppNavigator'
+import WelcomePage from './components/WelcomePage'
 
 
 
