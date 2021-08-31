@@ -27,7 +27,7 @@ class ProductFactory extends Factory
             'name' => $this->faker->company(),
             'description' => $this->faker->paragraph(),
             'price' => $this->faker->unique()->numberBetween(10,35),
-            'image' => 'https://placeimg.com/100/100/any?' . rand(1, 100),
+            'image' => $this->faker->image('public/assets/products',640,480, null, false),    
         ];
     }
 }

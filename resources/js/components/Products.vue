@@ -4,7 +4,7 @@
     <div v-for="product in products" :key="product.id" class="d-flex flex-row">
         <v-card
     :loading="loading"
-    class="mx-auto my-3"
+    class=" my-3 col-6"
     max-width="374"
   >
     <template slot="progress">
@@ -19,6 +19,7 @@
       height="250"
       src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
     ></v-img>
+
 
     <v-card-title>{{ product.name }}</v-card-title>
 

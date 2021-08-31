@@ -1939,6 +1939,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -38396,7 +38397,7 @@ var render = function() {
           _c(
             "v-card",
             {
-              staticClass: "mx-auto my-3",
+              staticClass: " my-3 col-6",
               attrs: { loading: _vm.loading, "max-width": "374" }
             },
             [
