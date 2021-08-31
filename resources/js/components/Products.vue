@@ -9,8 +9,8 @@
           
         </v-card>
         <v-card v-on:click="()=> $router.push({name : 'OneProduct', params: {product}})">
-          <span v-if="product.description<150"> {{ product.description }}</span>
-          <span v-else>{{ product.description.substring(0,150)+"..." }}</span>
+          <div v-if="product.description.length < 150"> {{ product.description }}</div>
+          <div v-else>{{ product.description.substring(0,150) + "..." }}</div>
           
         </v-card>
         <v-card >
@@ -43,16 +43,7 @@ export default {
                     this.products = response.data.products
                 }
             })
-        },
-
-        // getOneProduct(id) {
-        //   axios.get('http://localhost:8000/api/products/'+id).then(response => {
-        //         if(response.status >= 200 && response.status < 300 ){
-        //             this.$router.push('oneproduct')
-        //         }
-        //     })
-        // }
-       
+        },            
     },
 
     mounted() {

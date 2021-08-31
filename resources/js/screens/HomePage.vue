@@ -1,6 +1,6 @@
 <template> 
    <div>
-       <app-navigator />
+       
        <products />
    </div>
 </template>

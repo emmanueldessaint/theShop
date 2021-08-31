@@ -1,6 +1,7 @@
 import HomePage from './screens/HomePage'
 import Products from './components/Products'
 import OneProduct from './components/OneProduct'
+import AppNavigator from './components/AppNavigator'
 
 
 
@@ -19,7 +20,7 @@ export default {
 
         {
             path:'/oneproduct',
-            component: OneProduct,
+            component: OneProduct, 
             props: true,
             name: 'OneProduct'
         },   
