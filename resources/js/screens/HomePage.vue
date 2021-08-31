@@ -2,7 +2,7 @@
    <div>
        <carousel-front-page />
        <home-component />
-       <best-sellers />
+       
    </div>
 </template>
 

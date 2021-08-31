@@ -15,6 +15,7 @@ Vue.component('example-component')
 
 Vue.use(VueRouter)
 
+import '../css/app.css';
 
 const app = new Vue({
     el: '#app',
