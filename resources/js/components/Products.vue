@@ -4,8 +4,9 @@
   <v-container>
     <v-row class="d-flex">
       <v-col v-for="product in products" :key="product" class="oneProduct" >
-        <v-card v-on:click="getOneProduct(product.id)">
+        <v-card v-on:click="()=> $router.push({name : 'OneProduct', params: {product}})">
           {{ product.name }}
+          
         </v-card>
         
       </v-col>
@@ -35,13 +36,13 @@ export default {
             })
         },
 
-        getOneProduct(id) {
-          axios.store('http://localhost:8000/api/products/'+id).then(response => {
-                if(response.status >= 200 && response.status < 300 ){
-                    this.$router.push('oneproduct')
-                }
-            })
-        }
+        // getOneProduct(id) {
+        //   axios.get('http://localhost:8000/api/products/'+id).then(response => {
+        //         if(response.status >= 200 && response.status < 300 ){
+        //             this.$router.push('oneproduct')
+        //         }
+        //     })
+        // }
        
     },
 

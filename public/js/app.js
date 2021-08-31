@@ -1887,17 +1887,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  data: {},
-  methods: {
-    getThisProduct: function getThisProduct() {
-      var _this = this;
-
-      axios.get('http://localhost:8000/api/categories').then(function (response) {
-        if (response.status >= 200 && response.status < 300) {
-          _this.product = response.data.product;
-        }
-      });
-    }
+  props: ['product'],
+  methods: {// getThisProduct() {
+    //     axios.get('http://localhost:8000/api/categories').then(response => {
+    //         if(response.status >= 200 && response.status < 300 ){
+    //             this.product = response.data.product
+    //             console.log(response.data.product)
+    //         }
+    //     })
+    // },
   }
 });
 
@@ -1914,6 +1912,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
 //
 //
 //
@@ -1949,16 +1948,14 @@ __webpack_require__.r(__webpack_exports__);
           _this.products = response.data.products;
         }
       });
-    },
-    getOneProduct: function getOneProduct(id) {
-      var _this2 = this;
+    } // getOneProduct(id) {
+    //   axios.get('http://localhost:8000/api/products/'+id).then(response => {
+    //         if(response.status >= 200 && response.status < 300 ){
+    //             this.$router.push('oneproduct')
+    //         }
+    //     })
+    // }
 
-      axios.store('http://localhost:8000/api/products/' + id).then(function (response) {
-        if (response.status >= 200 && response.status < 300) {
-          _this2.$router.push('oneproduct');
-        }
-      });
-    }
   },
   mounted: function mounted() {
     this.getProducts();
@@ -2134,7 +2131,9 @@ __webpack_require__.r(__webpack_exports__);
     component: _components_Products__WEBPACK_IMPORTED_MODULE_1__.default
   }, {
     path: '/oneproduct',
-    component: _components_OneProduct__WEBPACK_IMPORTED_MODULE_2__.default
+    component: _components_OneProduct__WEBPACK_IMPORTED_MODULE_2__.default,
+    props: true,
+    name: 'OneProduct'
   }]
 });
 
@@ -38466,7 +38465,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c("div", [_vm._v("\n    " + _vm._s(_vm.product.name) + "\n")])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -38509,14 +38508,19 @@ var render = function() {
                     "v-card",
                     {
                       on: {
-                        click: function($event) {
-                          return _vm.getOneProduct(product.id)
+                        click: function() {
+                          return _vm.$router.push({
+                            name: "OneProduct",
+                            params: { product: product }
+                          })
                         }
                       }
                     },
                     [
                       _vm._v(
-                        "\r\n          " + _vm._s(product.name) + "\r\n        "
+                        "\r\n          " +
+                          _vm._s(product.name) +
+                          "\r\n          \r\n        "
                       )
                     ]
                   )

@@ -19,7 +19,9 @@ export default {
 
         {
             path:'/oneproduct',
-            component: OneProduct
+            component: OneProduct,
+            props: true,
+            name: 'OneProduct'
         },   
     ]
 }
