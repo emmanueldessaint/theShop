@@ -5,7 +5,16 @@
     <v-row class="d-flex">
       <v-col v-for="product in products" :key="product" class="oneProduct" >
         <v-card v-on:click="()=> $router.push({name : 'OneProduct', params: {product}})">
-          {{ product.name }}
+          <h3>{{ product.name }}</h3>
+          
+        </v-card>
+        <v-card v-on:click="()=> $router.push({name : 'OneProduct', params: {product}})">
+          <span v-if="product.description<150"> {{ product.description }}</span>
+          <span v-else>{{ product.description.substring(0,150)+"..." }}</span>
+          
+        </v-card>
+        <v-card >
+          <span>{{ product.price }} €</span>
           
         </v-card>
         

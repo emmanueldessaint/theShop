@@ -1942,6 +1942,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -38535,14 +38544,39 @@ var render = function() {
                         }
                       }
                     },
+                    [_c("h3", [_vm._v(_vm._s(product.name))])]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-card",
+                    {
+                      on: {
+                        click: function() {
+                          return _vm.$router.push({
+                            name: "OneProduct",
+                            params: { product: product }
+                          })
+                        }
+                      }
+                    },
                     [
-                      _vm._v(
-                        "\r\n          " +
-                          _vm._s(product.name) +
-                          "\r\n          \r\n        "
-                      )
+                      product.description < 150
+                        ? _c("span", [
+                            _vm._v(" " + _vm._s(product.description))
+                          ])
+                        : _c("span", [
+                            _vm._v(
+                              _vm._s(
+                                product.description.substring(0, 150) + "..."
+                              )
+                            )
+                          ])
                     ]
-                  )
+                  ),
+                  _vm._v(" "),
+                  _c("v-card", [
+                    _c("span", [_vm._v(_vm._s(product.price) + " €")])
+                  ])
                 ],
                 1
               )
