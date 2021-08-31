@@ -2,7 +2,8 @@ import HomePage from './screens/HomePage'
 import Products from './components/Products'
 import OneProduct from './components/OneProduct'
 import AppNavigator from './components/AppNavigator'
-import WelcomePage from './components/WelcomePage'
+
+import ProductsPage from './screens/ProductsPage'
 
 
 
@@ -16,7 +17,7 @@ export default {
         
         {
             path:'/products',
-            component: Products
+            component: ProductsPage
         },    
 
         {

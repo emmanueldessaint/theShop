@@ -1,6 +1,7 @@
 <template>
   <v-carousel hide-delimiters class="carousel">
     <v-carousel-item
+    
       v-for="(item,i) in items"
       :key="i"
       :src="item.src"
@@ -35,5 +36,8 @@
 <style>
 .carousel{
     margin-top:120px;
+}
+.img-carousel{
+    height:110%;
 }
 </style>

@@ -21,6 +21,15 @@ class ProductController extends Controller
         ]);
     }
 
+    public function best()
+    {
+        $products = Product::all()->random(4);
+
+        return response()->json([
+            'products' => $products
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -2,17 +2,19 @@
   
     <div class="d-flex justify-center pt-4 pb-5 menu-entier">
       <div class="d-flex flex-column mr-5">
-        <h2>PowerBike</h2>
-        <h6>Les spécialistes du e-Bike</h6>
+        <router-link to="/">
+          <h2>PowerBike</h2>
+          <h6>Les spécialistes du e-Bike</h6>
+        </router-link>
       </div>
       
       <div class="main-div">
         <div class="barre-recherche"><p class="ml-3">Barre de recherche</p></div>
         <div class="d-flex justify-space-around mt-4">
-          <h4><router-link
-  to="/products"
+          <h4><router-link to="/products">Nos produits</router-link></h4>
+  
  
->Nos produits</router-link></h4>
+
           <h4>Nos offres</h4>
           <h4>Le blog</h4>
           <h4>Notre histoire</h4>

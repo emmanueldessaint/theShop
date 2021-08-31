@@ -21,5 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('products', [ProductController::class, 'index']);
 
+Route::get('bestsellers', [ProductController::class, 'best']);
+
 Route::get('products/{id}', [ProductController::class, 'show']);
 

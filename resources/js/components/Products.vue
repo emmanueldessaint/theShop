@@ -1,5 +1,5 @@
-<template> 
-<div>
+<template > 
+<div class="background">
     
   <v-container class="contenu">
     <v-row class="d-flex">
@@ -53,8 +53,12 @@ export default {
 </script>
 
 <style scoped>
+.background{
+  background:rgb(253, 248, 248);
+}
 .contenu{
   margin-top:200px;
+  
 }
 .oneProduct{
     min-width:300px;
