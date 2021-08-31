@@ -1898,52 +1898,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      products: []
+      products: [],
+      alignments: ['start', 'center', 'end']
     };
   },
   methods: {
@@ -6649,7 +6608,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.oneProduct[data-v-57b394cf]{\r\n    width:200px;\r\n    height:300px;\r\n    background-color: rgb(104, 104, 104);\n}\n.d-flex[data-v-57b394cf]{\r\n    display:flex;\r\n    flex-direction: row;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.oneProduct[data-v-57b394cf]{\r\n    min-width:300px;\r\n    height:200px;\r\n    /* height:300px; */\r\n    background-color: rgb(233, 234, 235);\r\n    margin:20px;\r\n    border-radius:7px;\n}\n.d-flex[data-v-57b394cf]{\r\n    display:flex;\r\n    flex-wrap: wrap;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -38389,79 +38348,34 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    _vm._l(_vm.products, function(product) {
-      return _c(
-        "div",
-        { key: product.id, staticClass: "d-flex flex-row" },
+    [
+      _c(
+        "v-container",
         [
           _c(
-            "v-card",
-            {
-              staticClass: " my-3 col-6",
-              attrs: { loading: _vm.loading, "max-width": "374" }
-            },
-            [
-              _c(
-                "template",
-                { slot: "progress" },
+            "v-row",
+            { staticClass: "d-flex" },
+            _vm._l(_vm.products, function(product) {
+              return _c(
+                "v-col",
+                { key: product, staticClass: "oneProduct" },
                 [
-                  _c("v-progress-linear", {
-                    attrs: {
-                      color: "deep-purple",
-                      height: "10",
-                      indeterminate: ""
-                    }
-                  })
+                  _c("v-card", [
+                    _vm._v(
+                      "\r\n          " + _vm._s(product.name) + "\r\n        "
+                    )
+                  ])
                 ],
                 1
-              ),
-              _vm._v(" "),
-              _c("v-img", {
-                attrs: {
-                  height: "250",
-                  src: "https://cdn.vuetifyjs.com/images/cards/cooking.png"
-                }
-              }),
-              _vm._v(" "),
-              _c("v-card-title", [_vm._v(_vm._s(product.name))]),
-              _vm._v(" "),
-              _c(
-                "v-card-text",
-                [
-                  _c(
-                    "v-row",
-                    { staticClass: "mx-0", attrs: { align: "center" } },
-                    [
-                      _c("v-rating", {
-                        attrs: {
-                          value: 4.5,
-                          color: "amber",
-                          dense: "",
-                          "half-increments": "",
-                          readonly: "",
-                          size: "14"
-                        }
-                      })
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("div", [_vm._v(_vm._s(product.description))])
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c("v-divider", { staticClass: "mx-4" }),
-              _vm._v(" "),
-              _c("v-card-title", [_vm._v(_vm._s(product.price))])
-            ],
-            2
+              )
+            }),
+            1
           )
         ],
         1
       )
-    }),
-    0
+    ],
+    1
   )
 }
 var staticRenderFns = []

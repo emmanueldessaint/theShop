@@ -1,61 +1,19 @@
 <template> 
 <div>
     
-    <div v-for="product in products" :key="product.id" class="d-flex flex-row">
-        <v-card
-    :loading="loading"
-    class=" my-3 col-6"
-    max-width="374"
-  >
-    <template slot="progress">
-      <v-progress-linear
-        color="deep-purple"
-        height="10"
-        indeterminate
-      ></v-progress-linear>
-    </template>
-
-    <v-img
-      height="250"
-      src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-    ></v-img>
-
-
-    <v-card-title>{{ product.name }}</v-card-title>
-
-    <v-card-text>
-      <v-row
-        align="center"
-        class="mx-0"
-      >
-        <v-rating
-          :value="4.5"
-          color="amber"
-          dense
-          half-increments
-          readonly
-          size="14"
-        ></v-rating>
-
+  <v-container>
+    <v-row class="d-flex">
+      <v-col v-for="product in products" :key="product" class="oneProduct" >
+        <v-card>
+          {{ product.name }}
+        </v-card>
         
-      </v-row>
-
-      
-
-      <div>{{ product.description }}</div>
-    </v-card-text>
-
-    <v-divider class="mx-4"></v-divider>
-
-    <v-card-title>{{ product.price }}</v-card-title>
-
-    
-
-    
-  </v-card>
-       
-    </div>
+      </v-col>
+    </v-row>
+  </v-container>
+  
 </div>
+
 </template>
 
 <script>
@@ -63,6 +21,11 @@ export default {
     data: function() {
         return {
             products: [],
+            alignments: [
+        'start',
+        'center',
+        'end',
+      ],
         }
     },
     methods: {
@@ -86,12 +49,15 @@ export default {
 
 <style scoped>
 .oneProduct{
-    width:200px;
-    height:300px;
-    background-color: rgb(104, 104, 104);
+    min-width:300px;
+    height:200px;
+    /* height:300px; */
+    background-color: rgb(233, 234, 235);
+    margin:20px;
+    border-radius:7px;
 }
 .d-flex{
     display:flex;
-    flex-direction: row;
+    flex-wrap: wrap;
 }
 </style>
