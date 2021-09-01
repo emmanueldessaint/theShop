@@ -19,3 +19,7 @@
 .mt-9{
     margin-top:80px;
 }
+.router-link{
+    text-decoration: none;
+    color:inherit;
+}
