@@ -22,7 +22,10 @@ class ProductReviewsFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->company(),
+            'description' => $this->faker->paragraph(),
+            'id_product' => $this->faker->unique()->numberBetween(1,10),
+            'note' => $this->faker->numberBetween(1,5)   
         ];
     }
 }

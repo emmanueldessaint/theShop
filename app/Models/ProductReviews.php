@@ -11,13 +11,18 @@ class ProductReviews extends Model
 
     protected $fillable = [
         'id_product',
+        'id_user',
         'title',
         'description',
         'note',
     ];
 
     public function product() {
-        return  $this->belongsTo('App/Models/Product', 'id_product');
+        return $this->belongsTo('App/Models/Product', 'id_product');
+    }
+
+    public function user() {
+        return $this->belongsTo('App/models/User', 'id_user');
     }
     
     protected $guarded = [];
