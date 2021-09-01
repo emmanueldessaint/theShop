@@ -2363,11 +2363,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _components_AppNavigator_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/AppNavigator.vue */ "./resources/js/components/AppNavigator.vue");
-/* harmony import */ var _components_Products_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Products.vue */ "./resources/js/components/Products.vue");
-/* harmony import */ var _components_CarouselFrontPage_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/CarouselFrontPage.vue */ "./resources/js/components/CarouselFrontPage.vue");
-/* harmony import */ var _components_HomeComponent_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/HomeComponent.vue */ "./resources/js/components/HomeComponent.vue");
-/* harmony import */ var _components_BestSellers_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/BestSellers.vue */ "./resources/js/components/BestSellers.vue");
+/* harmony import */ var _components_CarouselFrontPage_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/CarouselFrontPage.vue */ "./resources/js/components/CarouselFrontPage.vue");
+/* harmony import */ var _components_HomeComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/HomeComponent.vue */ "./resources/js/components/HomeComponent.vue");
 //
 //
 //
@@ -2376,18 +2373,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
-
-
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
-    Products: _components_Products_vue__WEBPACK_IMPORTED_MODULE_1__.default,
-    AppNavigator: _components_AppNavigator_vue__WEBPACK_IMPORTED_MODULE_0__.default,
-    CarouselFrontPage: _components_CarouselFrontPage_vue__WEBPACK_IMPORTED_MODULE_2__.default,
-    HomeComponent: _components_HomeComponent_vue__WEBPACK_IMPORTED_MODULE_3__.default,
-    BestSellers: _components_BestSellers_vue__WEBPACK_IMPORTED_MODULE_4__.default
+    CarouselFrontPage: _components_CarouselFrontPage_vue__WEBPACK_IMPORTED_MODULE_0__.default,
+    HomeComponent: _components_HomeComponent_vue__WEBPACK_IMPORTED_MODULE_1__.default
   }
 });
 
@@ -2513,11 +2504,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _screens_HomePage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./screens/HomePage */ "./resources/js/screens/HomePage.vue");
-/* harmony import */ var _components_Products__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Products */ "./resources/js/components/Products.vue");
-/* harmony import */ var _components_OneProduct__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/OneProduct */ "./resources/js/components/OneProduct.vue");
-/* harmony import */ var _components_AppNavigator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/AppNavigator */ "./resources/js/components/AppNavigator.vue");
-/* harmony import */ var _screens_ProductsPage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./screens/ProductsPage */ "./resources/js/screens/ProductsPage.vue");
-
+/* harmony import */ var _components_OneProduct__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/OneProduct */ "./resources/js/components/OneProduct.vue");
+/* harmony import */ var _screens_ProductsPage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./screens/ProductsPage */ "./resources/js/screens/ProductsPage.vue");
+Object(function webpackMissingModule() { var e = new Error("Cannot find module '../screens/CartPage.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 
 
 
@@ -2529,12 +2518,15 @@ __webpack_require__.r(__webpack_exports__);
     component: _screens_HomePage__WEBPACK_IMPORTED_MODULE_0__.default
   }, {
     path: '/products',
-    component: _screens_ProductsPage__WEBPACK_IMPORTED_MODULE_4__.default
+    component: _screens_ProductsPage__WEBPACK_IMPORTED_MODULE_2__.default
   }, {
     path: '/oneproduct',
-    component: _components_OneProduct__WEBPACK_IMPORTED_MODULE_2__.default,
+    component: _components_OneProduct__WEBPACK_IMPORTED_MODULE_1__.default,
     props: true,
     name: 'OneProduct'
+  }, {
+    path: '/cart',
+    component: Object(function webpackMissingModule() { var e = new Error("Cannot find module '../screens/CartPage.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
   }]
 });
 
@@ -7056,7 +7048,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".mt-20{\r\n    margin-top:200px;\r\n}\r\n.mt-10{\r\n    margin-top:100px;\r\n}\r\n.mt-15{\r\n    margin-top:150px;\r\n}\r\n.mt-6{\r\n    margin-top:45px;\r\n}\r\n.mt-7{\r\n    margin-top:55px;\r\n}\r\n.mt-8{\r\n    margin-top:65px;\r\n}\r\n.mt-9{\r\n    margin-top:80px;\r\n}\r\n.router-link{\r\n    text-decoration: none;\r\n    color:inherit;\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".mt-20{\r\n    margin-top:200px;\r\n}\r\n.mt-10{\r\n    margin-top:100px;\r\n}\r\n.mt-15{\r\n    margin-top:150px;\r\n}\r\n.mt-6{\r\n    margin-top:45px;\r\n}\r\n.mt-7{\r\n    margin-top:55px;\r\n}\r\n.mt-8{\r\n    margin-top:65px;\r\n}\r\n.mt-9{\r\n    margin-top:80px;\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

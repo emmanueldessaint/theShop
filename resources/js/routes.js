@@ -1,11 +1,7 @@
 import HomePage from './screens/HomePage'
-import Products from './components/Products'
 import OneProduct from './components/OneProduct'
-import AppNavigator from './components/AppNavigator'
-
 import ProductsPage from './screens/ProductsPage'
-
-
+import CartPage from '../screens/CartPage.vue'
 
 export default {
     mode:'history',
@@ -26,5 +22,10 @@ export default {
             props: true,
             name: 'OneProduct'
         },   
+
+        {
+            path:'/cart',
+            component: CartPage
+        },  
     ]
 }
