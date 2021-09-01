@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\ProductReviews;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -64,6 +65,12 @@ class ProductController extends Controller
         return response()->json([
             'product' => $product
         ]);
+    }
+
+    public function reviews($id) 
+    {
+        $reviews = ProductReviews::where('id_product', '=', $id)->get();
+        return json_encode($reviews);
     }
 
     /**

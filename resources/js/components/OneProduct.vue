@@ -36,13 +36,15 @@
       <v-row>
           <div></div>
       </v-row>
+      <ProductReviews v-bind:product="product"/>
   </div>
 </template>
 
 <script>
 import AppNavigator from './AppNavigator.vue'
+import ProductReviews from './ProductReviews.vue'
 export default {
-  components: { AppNavigator },
+  components: { AppNavigator, ProductReviews },
     props: ['product'],
     
     methods: {
