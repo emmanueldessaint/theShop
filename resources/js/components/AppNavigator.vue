@@ -25,15 +25,19 @@
       </div>
       <div class="d-flex flex-row ml-5">
         <span class="ml-5">Se connecter</span>
-        <span class="ml-5">Panier</span>
+        <h5><router-link class="router-link router-menu ml-5" to="/cart">Panier</router-link></h5>
       </div>
   </div>
 </template>
 
 <script>
 export default {
-   
-  }
+    methods: {
+        removeItemFromCart(item) {
+            this.$store.dispatch('removeItemFromCart', item)
+        }
+    }
+}
 </script>
 
 <style scoped>

@@ -16,9 +16,13 @@ export default new Vuex.Store({
             let cartItems = state.cartItems
             cartItems.push(payload)
             state.cartItems = cartItems
+        },
+        removeItemFromCart(state, payload) {
+            let itemToBeRemoved = payload
+            state.cartItems = state.cartItems.filter((item) => itemToBeRemoved.id !== item.id)
         }
     },
-    getter: {
+    getters: {
         getCartItems(state) {
             return state.cartItems
         }
@@ -26,6 +30,9 @@ export default new Vuex.Store({
     actions: {
         addItemToCart(state, payload) {
             state.commit('addItemToCart', payload)
+        },
+        removeItemFromCart(state, payload) {
+            state.commit('removeItemFromCart', payload)
         }
     },
     modules: {

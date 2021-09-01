@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="margin-top">
         <cart-component />
     </div>
 </template>
@@ -15,5 +15,7 @@ components: {  CartComponent }
 </script>
 
 <style>
-
+.margin-top{
+    margin-top:200px;
+}
 </style>
