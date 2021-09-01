@@ -23,7 +23,10 @@
                         <div class="ajouter-retirer ml-2">-</div>
                     </div>
                     <div>
-                        <div class="bouton-ajouter-panier"><h4>Ajouter au panier</h4></div>
+                        <btn class="bouton-ajouter-panier" 
+                        @click="() => addItemToCart(product)">
+                            <h4>Ajouter au panier</h4>
+                        </btn>
                     </div>
                 </div>
                 <div class="mt-7"><p>Livraison offerte dès 50€ d'achat</p></div>
@@ -41,8 +44,12 @@ import AppNavigator from './AppNavigator.vue'
 export default {
   components: { AppNavigator },
     props: ['product'],
+    
     methods: {
-        
+        addItemToCart(product) {
+            this.$store.dispatch('addItemToCart', product)
+            console.log(this.$store.getters.getCartItems)
+        }
     }
 }
 </script>

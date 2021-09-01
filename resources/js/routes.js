@@ -1,7 +1,7 @@
 import HomePage from './screens/HomePage'
 import OneProduct from './components/OneProduct'
 import ProductsPage from './screens/ProductsPage'
-import CartPage from '../screens/CartPage.vue'
+import CartPage from './screens/CartPage.vue'
 
 export default {
     mode:'history',

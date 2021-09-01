@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import routes from './routes'
 import index from './index'
 import vuetify from './vuetify';
-
+import coreState from './coreState'
 
 
 
@@ -23,5 +23,6 @@ const app = new Vue({
     components: {
         index
     },
-    vuetify
+    vuetify,
+    store: coreState
 });
