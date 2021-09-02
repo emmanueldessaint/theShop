@@ -1,7 +1,7 @@
 <template > 
 <div class="background">
-    
    <v-container class="contenu">
+    <ProductFilter />
     <v-row class="d-flex">
       <v-col v-for="product in products" :key="product" class="oneProduct" v-on:click="()=> $router.push({name : 'OneProduct', params: {product}})">
         <v-card class="d-flex justify-center">
@@ -23,7 +23,11 @@
 </template>
 
 <script>
+import ProductFilter from './ProductFilter.vue'
+
 export default {
+    name: 'Products',
+    component: { ProductFilter }, 
     data: function() {
         return {
             products: [],

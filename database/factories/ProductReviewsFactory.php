@@ -24,7 +24,8 @@ class ProductReviewsFactory extends Factory
         return [
             'title' => $this->faker->company(),
             'description' => $this->faker->paragraph(),
-            'id_product' => $this->faker->unique()->numberBetween(1,10),
+            'id_product' => $this->faker->numberBetween(1,10),
+            'id_user' => $this->faker->numberBetween(1,10),
             'note' => $this->faker->numberBetween(1,5)   
         ];
         

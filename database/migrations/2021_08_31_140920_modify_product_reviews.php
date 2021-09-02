@@ -13,9 +13,9 @@ class ModifyProductReviews extends Migration
      */
     public function up()
     {
-        Schema::table('product_reviews', function (Blueprint $table) {
-            $table->string('note');
-        });
+        // Schema::table('product_reviews', function (Blueprint $table) {
+        //     $table->string('note');
+        // });
     }
 
     /**
