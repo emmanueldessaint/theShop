@@ -1,5 +1,5 @@
 import HomePage from './screens/HomePage'
-import OneProduct from './components/OneProduct'
+import OneProductPage from './screens/OneProductPage'
 import ProductsPage from './screens/ProductsPage'
 import CartPage from './screens/CartPage.vue'
 
@@ -18,7 +18,7 @@ export default {
 
         {
             path:'/oneproduct',
-            component: OneProduct, 
+            component: OneProductPage, 
             props: true,
             name: 'OneProduct'
         },   
