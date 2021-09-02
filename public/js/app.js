@@ -2425,6 +2425,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       products: [],
+      allProducts: [],
       oneProduct: ''
     };
   },
@@ -2435,11 +2436,12 @@ __webpack_require__.r(__webpack_exports__);
       axios.get('http://localhost:8000/api/products').then(function (response) {
         if (response.status >= 200 && response.status < 300) {
           _this.products = response.data.products;
+          _this.allProducts = response.data.products;
         }
       });
     },
     filterProductPrice: function filterProductPrice(range) {
-      console.log(range);
+      this.products = this.allProducts;
       var filteredProduct = this.products.filter(function (product) {
         return product.price >= range[0] && product.price <= range[1];
       });
@@ -7608,7 +7610,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* @media only screen and (min-width: 1400px) {\r\n  .contenu{\r\n  margin-top:200px;\r\n  margin-left:auto;\r\n  margin-right:auto;\r\n  width:1200px;\r\n  }\r\n}\r\n@media only screen and (min-width: 1400px) {\r\n  .contenu{\r\n  margin-top:200px;\r\n  margin-left:auto;\r\n  margin-right:auto;\r\n  width:1200px;\r\n  }\r\n} */\n.background[data-v-57b394cf]{\r\n  background:rgb(253, 248, 248);\n}\n.contenu[data-v-57b394cf]{\r\n  margin-top:200px;\r\n  display: flex;\r\n  flex-direction: row;\n}\n.one-product[data-v-57b394cf]{\r\n   margin:20px;\r\n   background-color:white;\n}\n.d-flex[data-v-57b394cf]{\r\n    display:flex;\r\n    flex-wrap: wrap;\n}\n.image-produit[data-v-57b394cf]{\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  width:200px;\r\n  height:200px;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* @media only screen and (min-width: 1400px) {\r\n  .contenu{\r\n  margin-top:200px;\r\n  margin-left:auto;\r\n  margin-right:auto;\r\n  width:1200px;\r\n  }\r\n}\r\n@media only screen and (min-width: 1400px) {\r\n  .contenu{\r\n  margin-top:200px;\r\n  margin-left:auto;\r\n  margin-right:auto;\r\n  width:1200px;\r\n  }\r\n} */\n.background[data-v-57b394cf]{\r\n  background:rgb(253, 248, 248);\n}\n.contenu[data-v-57b394cf]{\r\n  margin-top:200px;\r\n  display: flex;\r\n  flex-direction: row;\n}\n.one-product[data-v-57b394cf]{\r\n   margin:20px;\r\n   background-color:white;\n}\n.d-flex[data-v-57b394cf]{\r\n    display:flex;\r\n    flex-wrap: wrap;\n}\n.image-produit[data-v-57b394cf]{\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  width:200px;\r\n  height:200px;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

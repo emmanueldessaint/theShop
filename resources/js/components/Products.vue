@@ -36,6 +36,7 @@ export default {
     data: function() {
         return {
             products: [],
+            allProducts: [],
             oneProduct: '',
         }
     },
@@ -44,11 +45,12 @@ export default {
             axios.get('http://localhost:8000/api/products').then(response => {
                 if(response.status >= 200 && response.status < 300 ){
                     this.products = response.data.products
+                    this.allProducts = response.data.products
                 }
             })
         }, 
         filterProductPrice(range) {
-            console.log(range)
+            this.products = this.allProducts
             const filteredProduct = this.products.filter(product => product.price >= range[0] && product.price <= range[1])
             this.products = filteredProduct
         }           
