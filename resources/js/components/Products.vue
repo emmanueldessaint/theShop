@@ -33,6 +33,7 @@ import ProductFilter from './ProductFilter.vue'
 export default {
     components: { ProductFilter },
     name: 'Products',
+
     data: function() {
         return {
             products: [],

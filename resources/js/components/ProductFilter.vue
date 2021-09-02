@@ -37,6 +37,10 @@ export default {
 
 <style lang="scss" scoped>
 
+
+.filtres {
+}
+
 h4 {
     margin-bottom: 1.5rem;    
 }
@@ -48,6 +52,7 @@ h4 {
     width: 15rem;
     padding: 1rem;
     margin-right: 1rem;
+
 }
 
 

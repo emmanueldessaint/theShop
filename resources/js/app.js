@@ -4,14 +4,20 @@ import routes from './routes'
 import index from './index'
 import vuetify from './vuetify';
 import coreState from './coreState'
+import StarRating from 'vue-star-rating'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faShoppingCart, faUsers, faTruckMoving, faAward, faGlobeAfrica, faTrophy } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-
+library.add(faShoppingCart, faUsers, faTruckMoving, faAward, faGlobeAfrica, faTrophy)
 
 require('./bootstrap');
 
 window.Vue = require('vue').default;
 
-Vue.component('example-component')
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+
+
 
 Vue.use(VueRouter)
 
@@ -24,5 +30,6 @@ const app = new Vue({
         index
     },
     vuetify,
-    store: coreState
+    store: coreState,
+    StarRating,
 });

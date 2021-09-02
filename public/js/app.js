@@ -1928,6 +1928,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'BestSellers',
   props: ['product'],
@@ -2260,6 +2261,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2330,6 +2334,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+Object(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-star-rating'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 //
 //
 //
@@ -2350,12 +2355,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'TopReviews',
   props: ['product'],
   data: function data() {
     return {
-      reviews: []
+      reviews: [],
+      rating: ""
     };
   },
   methods: {
@@ -2367,10 +2378,16 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (err) {
         console.log(err);
       });
+    },
+    ratingNumber: function ratingNumber(review) {
+      var rating = review.note;
     }
   },
   mounted: function mounted() {
     this.getProductReviews();
+  },
+  components: {
+    StarRating: Object(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-star-rating'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
   }
 });
 
@@ -2706,34 +2723,44 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./routes */ "./resources/js/routes.js");
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index */ "./resources/js/index.vue");
 /* harmony import */ var _vuetify__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./vuetify */ "./resources/js/vuetify.js");
 /* harmony import */ var _coreState__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./coreState */ "./resources/js/coreState.js");
-/* harmony import */ var _css_app_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../css/app.css */ "./resources/css/app.css");
+Object(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-star-rating'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+Object(function webpackMissingModule() { var e = new Error("Cannot find module '@fortawesome/fontawesome-svg-core'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+Object(function webpackMissingModule() { var e = new Error("Cannot find module '@fortawesome/free-solid-svg-icons'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+Object(function webpackMissingModule() { var e = new Error("Cannot find module '@fortawesome/vue-fontawesome'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _css_app_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../css/app.css */ "./resources/css/app.css");
 
 
 
 
 
 
+
+
+
+
+Object(function webpackMissingModule() { var e = new Error("Cannot find module '@fortawesome/fontawesome-svg-core'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(Object(function webpackMissingModule() { var e = new Error("Cannot find module '@fortawesome/free-solid-svg-icons'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), Object(function webpackMissingModule() { var e = new Error("Cannot find module '@fortawesome/free-solid-svg-icons'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), Object(function webpackMissingModule() { var e = new Error("Cannot find module '@fortawesome/free-solid-svg-icons'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), Object(function webpackMissingModule() { var e = new Error("Cannot find module '@fortawesome/free-solid-svg-icons'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), Object(function webpackMissingModule() { var e = new Error("Cannot find module '@fortawesome/free-solid-svg-icons'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), Object(function webpackMissingModule() { var e = new Error("Cannot find module '@fortawesome/free-solid-svg-icons'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js").default;
-vue__WEBPACK_IMPORTED_MODULE_4__.default.component('example-component');
-vue__WEBPACK_IMPORTED_MODULE_4__.default.use(vue_router__WEBPACK_IMPORTED_MODULE_5__.default);
+vue__WEBPACK_IMPORTED_MODULE_5__.default.component('font-awesome-icon', Object(function webpackMissingModule() { var e = new Error("Cannot find module '@fortawesome/vue-fontawesome'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+vue__WEBPACK_IMPORTED_MODULE_5__.default.use(vue_router__WEBPACK_IMPORTED_MODULE_6__.default);
 
-var app = new vue__WEBPACK_IMPORTED_MODULE_4__.default({
+var app = new vue__WEBPACK_IMPORTED_MODULE_5__.default({
   el: '#app',
-  router: new vue_router__WEBPACK_IMPORTED_MODULE_5__.default(_routes__WEBPACK_IMPORTED_MODULE_0__.default),
+  router: new vue_router__WEBPACK_IMPORTED_MODULE_6__.default(_routes__WEBPACK_IMPORTED_MODULE_0__.default),
   components: {
     index: _index__WEBPACK_IMPORTED_MODULE_1__.default
   },
   vuetify: _vuetify__WEBPACK_IMPORTED_MODULE_2__.default,
-  store: _coreState__WEBPACK_IMPORTED_MODULE_3__.default
+  store: _coreState__WEBPACK_IMPORTED_MODULE_3__.default,
+  StarRating: Object(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-star-rating'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
 });
 
 /***/ }),
@@ -7394,7 +7421,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".background[data-v-b9cecd52] {\n  background: white;\n  background: linear-gradient(90deg, white 0%, #f3f5ff 33%, #f3f5ff 67%, white 100%);\n}\n.stars[data-v-b9cecd52] {\n  width: 100px;\n  height: 20px;\n}\n.paragraphe-commentaire[data-v-b9cecd52] {\n  font-family: \"Courier New\", monospace;\n}\n.reviews[data-v-b9cecd52] {\n  margin: 2rem;\n}\n.reviews h5[data-v-b9cecd52] {\n  font-weight: bold;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".background[data-v-b9cecd52] {\n  background: white;\n  background: linear-gradient(90deg, white 0%, #f3f5ff 33%, #f3f5ff 67%, white 100%);\n}\n.stars[data-v-b9cecd52] {\n  width: 100px;\n  height: 20px;\n}\n.paragraphe-commentaire[data-v-b9cecd52] {\n  font-family: \"Courier New\", monospace;\n}\n.reviews[data-v-b9cecd52] {\n  margin: 2rem;\n}\n.reviews h5[data-v-b9cecd52] {\n  font-weight: bold;\n}\n.router-link-comment[data-v-b9cecd52] {\n  text-decoration: none;\n  color: inherit;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -7490,7 +7517,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.img-product[data-v-85666596]{\r\n    width:250px;\r\n    height:250px;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\n}\n.oneProduct[data-v-85666596]{\r\n    width:250px;\n}\n.product-name[data-v-85666596]{\r\n    height:60px;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.img-product[data-v-85666596]{\r\n    width:250px;\r\n    height:250px;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\n}\n.oneProduct[data-v-85666596]{\r\n    width:250px;\n}\n.product-name[data-v-85666596]{\r\n    height:60px;\n}\n.icone[data-v-85666596]{\r\n  font-size:250%;\r\n    color:rgb(211, 208, 34);\n}\nh2[data-v-85666596]{\r\n  \r\n    color: rgb(54, 54, 54);\n}\nh4[data-v-85666596]{\r\n  \r\n    color: rgb(54, 54, 54);\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -7586,7 +7613,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.background-test[data-v-782dcf83]{\r\n    background-color:red;\n}\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.icone[data-v-782dcf83]{\r\n    font-size:130%;\r\n    color:rgb(42, 42, 42);\n}\n.quality-product[data-v-782dcf83]{\r\n    margin-left:auto;\r\n    margin-right:auto;\r\n    width:80%;\n}\nh4[data-v-782dcf83]{\r\n    font-family: \"Lucida Console\", \"Courier New\", monospace;\r\n    color: rgb(54, 54, 54);\n}\nh5[data-v-782dcf83]{\r\n    font-family:  \"Courier New\", monospace;\r\n    color: rgb(54, 54, 54);\n}\n.bord-center[data-v-782dcf83]{\r\n    border-right:1px rgb(214, 214, 214) solid;\r\n    border-left:1px rgb(214, 214, 214) solid;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -7610,7 +7637,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* @media only screen and (min-width: 1400px) {\r\n  .contenu{\r\n  margin-top:200px;\r\n  margin-left:auto;\r\n  margin-right:auto;\r\n  width:1200px;\r\n  }\r\n}\r\n@media only screen and (min-width: 1400px) {\r\n  .contenu{\r\n  margin-top:200px;\r\n  margin-left:auto;\r\n  margin-right:auto;\r\n  width:1200px;\r\n  }\r\n} */\n.background[data-v-57b394cf]{\r\n  background:rgb(253, 248, 248);\n}\n.contenu[data-v-57b394cf]{\r\n  margin-top:200px;\r\n  display: flex;\r\n  flex-direction: row;\n}\n.one-product[data-v-57b394cf]{\r\n   margin:20px;\r\n   background-color:white;\n}\n.d-flex[data-v-57b394cf]{\r\n    display:flex;\r\n    flex-wrap: wrap;\n}\n.image-produit[data-v-57b394cf]{\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  width:200px;\r\n  height:200px;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* @media only screen and (min-width: 1400px) {\r\n  .contenu{\r\n  margin-top:200px;\r\n  margin-left:auto;\r\n  margin-right:auto;\r\n  width:1200px;\r\n  }\r\n}\r\n@media only screen and (min-width: 1400px) {\r\n  .contenu{\r\n  margin-top:200px;\r\n  margin-left:auto;\r\n  margin-right:auto;\r\n  width:1200px;\r\n  }\r\n} */\n.background[data-v-57b394cf]{\r\n  background:rgb(253, 248, 248);\n}\n.contenu[data-v-57b394cf]{\r\n  margin-top:200px;\r\n  display: flex;\r\n  flex-direction: row;\n}\n.one-product[data-v-57b394cf]{\r\n   margin:20px;\r\n   background-color:white;\n}\n.d-flex[data-v-57b394cf]{\r\n    display:flex;\r\n    flex-wrap: wrap;\n}\n.image-produit[data-v-57b394cf]{\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  width:200px;\r\n  height:200px;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -40717,7 +40744,12 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "d-flex flex-row ml-5" }, [
-        _c("span", { staticClass: "ml-5" }, [_vm._v("Se connecter")]),
+        _c(
+          "span",
+          { staticClass: "ml-5" },
+          [_c("font-awesome-icon", { attrs: { icon: "users" } })],
+          1
+        ),
         _vm._v(" "),
         _c(
           "h5",
@@ -40728,7 +40760,8 @@ var render = function() {
                 staticClass: "router-link router-menu ml-5",
                 attrs: { to: "/cart" }
               },
-              [_vm._v("Panier")]
+              [_c("font-awesome-icon", { attrs: { icon: "shopping-cart" } })],
+              1
             )
           ],
           1
@@ -40770,12 +40803,24 @@ var render = function() {
         [
           _c("v-col", { staticClass: "d-flex justify-center" }, [
             _c("div", { staticClass: "d-flex flex-column" }, [
+              _c(
+                "span",
+                { staticClass: "d-flex justify-center" },
+                [
+                  _c("font-awesome-icon", {
+                    staticClass: "icone",
+                    attrs: { icon: "trophy" }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
               _vm.product
-                ? _c("h2", { staticClass: "d-flex justify-center" }, [
+                ? _c("h2", { staticClass: "d-flex justify-center mt-3" }, [
                     _vm._v("Nos clients achètent aussi")
                   ])
                 : _c("div", [
-                    _c("h2", { staticClass: "d-flex justify-center" }, [
+                    _c("h2", { staticClass: "d-flex justify-center mt-5" }, [
                       _vm._v("Nos meilleures ventes")
                     ]),
                     _vm._v(" "),
@@ -41447,34 +41492,70 @@ var render = function() {
     [
       _c(
         "v-row",
-        { staticClass: "mt-15 " },
+        { staticClass: "mt-15 quality-product" },
         [
           _c("v-col", { staticClass: "d-flex flex-column" }, [
-            _c("h3", { staticClass: "d-flex justify-center" }, [
-              _vm._v("Respect du terroir")
+            _c(
+              "span",
+              { staticClass: "d-flex justify-center" },
+              [
+                _c("font-awesome-icon", {
+                  staticClass: "icone",
+                  attrs: { icon: "globe-africa" }
+                })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c("h4", { staticClass: "d-flex justify-center mt-3" }, [
+              _vm._v("RESPECT DU TERROIR")
             ]),
             _vm._v(" "),
-            _c("h5", { staticClass: "d-flex justify-center" }, [
+            _c("h5", { staticClass: "d-flex justify-center " }, [
               _vm._v("de l'environnement et des traditions")
             ])
           ]),
           _vm._v(" "),
-          _c("v-col", { staticClass: "d-flex flex-column" }, [
-            _c("h3", { staticClass: "d-flex justify-center" }, [
-              _vm._v("Livraison rapide")
+          _c("v-col", { staticClass: "d-flex flex-column bord-center" }, [
+            _c(
+              "span",
+              { staticClass: "d-flex justify-center" },
+              [
+                _c("font-awesome-icon", {
+                  staticClass: "icone",
+                  attrs: { icon: "truck-moving" }
+                })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c("h4", { staticClass: "d-flex justify-center mt-3" }, [
+              _vm._v("LIVRAISON RAPIDE")
             ]),
             _vm._v(" "),
-            _c("h5", { staticClass: "d-flex justify-center" }, [
+            _c("h5", { staticClass: "d-flex justify-center " }, [
               _vm._v("Dans toute la France")
             ])
           ]),
           _vm._v(" "),
           _c("v-col", { staticClass: "d-flex flex-column" }, [
-            _c("h3", { staticClass: "d-flex justify-center" }, [
-              _vm._v("Excellence de la qualité")
+            _c(
+              "span",
+              { staticClass: "d-flex justify-center" },
+              [
+                _c("font-awesome-icon", {
+                  staticClass: "icone",
+                  attrs: { icon: "award" }
+                })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c("h4", { staticClass: "d-flex justify-center mt-3" }, [
+              _vm._v("EXCELLENCE DE LA QUALITE")
             ]),
             _vm._v(" "),
-            _c("h5", { staticClass: "d-flex justify-center" }, [
+            _c("h5", { staticClass: "d-flex justify-center " }, [
               _vm._v("Le savoir faire Français")
             ])
           ])
@@ -41482,7 +41563,7 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c("v-row", { staticClass: "mt-10" }, [_c("best-sellers")], 1)
+      _c("v-row", { staticClass: "mt-5" }, [_c("best-sellers")], 1)
     ],
     1
   )
@@ -41568,26 +41649,134 @@ var render = function() {
     "div",
     [
       _c(
-        "v-row",
-        { staticClass: "reviews" },
-        _vm._l(_vm.reviews, function(review) {
-          return _c(
-            "v-col",
-            { key: review, attrs: { cols: 12 } },
-            [
-              _c("span", [_vm._v(_vm._s(review.note))]),
-              _vm._v(" "),
-              _c("router-link", { attrs: { to: "/user/" + review.id_user } }, [
-                _c("h5", [_vm._v(_vm._s(review.title))])
-              ]),
-              _vm._v(" "),
-              review.description.length > 0
-                ? _c("p", [_vm._v(_vm._s(review.description))])
-                : _vm._e()
-            ],
+        "v-container",
+        [
+          _c(
+            "v-row",
+            { staticClass: "reviews" },
+            _vm._l(_vm.reviews, function(review) {
+              return _c(
+                "v-col",
+                { key: review, attrs: { cols: 12, md: "3" } },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "router-link-comment",
+                      attrs: { to: "/user/" + review.id_user }
+                    },
+                    [
+                      review.note === "1"
+                        ? _c(
+                            "div",
+                            [
+                              _c("star-rating", {
+                                attrs: { "star-size": "20" },
+                                model: {
+                                  value: _vm.rating,
+                                  callback: function($$v) {
+                                    _vm.rating = $$v
+                                  },
+                                  expression: "rating"
+                                }
+                              })
+                            ],
+                            1
+                          )
+                        : review.note === "2"
+                        ? _c(
+                            "div",
+                            [
+                              _c("star-rating", {
+                                attrs: { "star-size": "20" },
+                                model: {
+                                  value: _vm.rating,
+                                  callback: function($$v) {
+                                    _vm.rating = $$v
+                                  },
+                                  expression: "rating"
+                                }
+                              })
+                            ],
+                            1
+                          )
+                        : review.note === "3"
+                        ? _c(
+                            "div",
+                            [
+                              _c("star-rating", {
+                                attrs: { "star-size": "20" },
+                                model: {
+                                  value: _vm.rating,
+                                  callback: function($$v) {
+                                    _vm.rating = $$v
+                                  },
+                                  expression: "rating"
+                                }
+                              })
+                            ],
+                            1
+                          )
+                        : review.note === "4"
+                        ? _c(
+                            "div",
+                            [
+                              _c("star-rating", {
+                                attrs: { "star-size": "20" },
+                                model: {
+                                  value: _vm.rating,
+                                  callback: function($$v) {
+                                    _vm.rating = $$v
+                                  },
+                                  expression: "rating"
+                                }
+                              })
+                            ],
+                            1
+                          )
+                        : review.note === "5"
+                        ? _c(
+                            "div",
+                            [
+                              _c("star-rating", {
+                                attrs: { "star-size": "20" },
+                                model: {
+                                  value: _vm.rating,
+                                  callback: function($$v) {
+                                    _vm.rating = $$v
+                                  },
+                                  expression: "rating"
+                                }
+                              })
+                            ],
+                            1
+                          )
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _c("h5", { staticClass: "mt-5" }, [
+                        _vm._v(_vm._s(review.title))
+                      ]),
+                      _vm._v(" "),
+                      review.description.length > 0 > 100
+                        ? _c("p", { staticClass: "mt-5" }, [
+                            _vm._v(_vm._s(review.description))
+                          ])
+                        : _c("p", { staticClass: "mt-5" }, [
+                            _vm._v(
+                              _vm._s(
+                                review.description.substring(0, 100) + "..."
+                              )
+                            )
+                          ])
+                    ]
+                  )
+                ],
+                1
+              )
+            }),
             1
           )
-        }),
+        ],
         1
       )
     ],

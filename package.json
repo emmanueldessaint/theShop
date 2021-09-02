@@ -26,8 +26,12 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.36",
+        "@fortawesome/free-solid-svg-icons": "^5.15.4",
+        "@fortawesome/vue-fontawesome": "^2.0.2",
         "npm-watch": "^0.11.0",
         "vue-router": "^3.5.2",
+        "vue-star-rating": "^1.7.0",
         "vuetify": "^2.5.8",
         "vuex": "^3.6.2",
         "vuex-persistedstate": "^4.0.0"

@@ -24,8 +24,8 @@
         </div>
       </div>
       <div class="d-flex flex-row ml-5">
-        <span class="ml-5">Se connecter</span>
-        <h5><router-link class="router-link router-menu ml-5" to="/cart">Panier</router-link></h5>
+        <span class="ml-5"><font-awesome-icon icon="users" /></span>
+        <h5><router-link class="router-link router-menu ml-5" to="/cart"><font-awesome-icon icon="shopping-cart" /></router-link></h5>
       </div>
   </div>
 </template>
