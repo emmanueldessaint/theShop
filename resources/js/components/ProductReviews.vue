@@ -3,10 +3,11 @@
   
 
     <div>
-        HELLO
+        
         <v-row class="reviews">
             <v-col :cols="12" v-for="review in reviews" :key="review">
                 <span>{{ review.note }}</span>
+                <span>HELLO</span>
                 <router-link :to="`/user/${review.id_user}`"> <!-- Lien vers le profil de l'utilisateur -->
                     <h5>{{ review.title }}</h5>
                 </router-link>

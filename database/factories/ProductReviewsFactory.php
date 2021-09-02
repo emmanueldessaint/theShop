@@ -27,5 +27,6 @@ class ProductReviewsFactory extends Factory
             'id_product' => $this->faker->unique()->numberBetween(1,10),
             'note' => $this->faker->numberBetween(1,5)   
         ];
+        
     }
 }

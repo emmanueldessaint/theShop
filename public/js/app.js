@@ -2301,6 +2301,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'TopReviews',
   props: ['product'],
@@ -41305,7 +41306,6 @@ var render = function() {
   return _c(
     "div",
     [
-      _vm._v("\n    HELLO\n    "),
       _c(
         "v-row",
         { staticClass: "reviews" },
@@ -41315,6 +41315,8 @@ var render = function() {
             { key: review, attrs: { cols: 12 } },
             [
               _c("span", [_vm._v(_vm._s(review.note))]),
+              _vm._v(" "),
+              _c("span", [_vm._v("HELLO")]),
               _vm._v(" "),
               _c("router-link", { attrs: { to: "/user/" + review.id_user } }, [
                 _c("h5", [_vm._v(_vm._s(review.title))])
