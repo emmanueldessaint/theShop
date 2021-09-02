@@ -3,9 +3,10 @@
     <v-row class="mt-15">
           <v-col class="d-flex justify-center">
               <div class="d-flex flex-column">
-                  <h2 v-if="product" class="d-flex justify-center">Nos clients achètent aussi</h2>
+                  <span class="d-flex justify-center"><font-awesome-icon class="icone" icon="trophy" /></span>
+                  <h2 v-if="product" class="d-flex justify-center mt-3">Nos clients achètent aussi</h2>
                   <div v-else>
-                    <h2 class="d-flex justify-center">Nos meilleures ventes</h2>
+                    <h2 class="d-flex justify-center mt-5">Nos meilleures ventes</h2>
                     <h4 class="d-flex justify-center">Découvrez les produits que nos clients adorent</h4> 
                   </div>                   
               </div>
@@ -30,7 +31,7 @@
 
 <script>
 export default {
-  
+
   name: 'BestSellers',
   props: ['product'],
   data: function() {
@@ -68,5 +69,18 @@ export default {
 }
 .product-name{
     height:60px;
+}
+.icone{
+  font-size:250%;
+    color:rgb(211, 208, 34);
+    
+}
+h2{
+  
+    color: rgb(54, 54, 54);
+}
+h4{
+  
+    color: rgb(54, 54, 54);
 }
 </style>

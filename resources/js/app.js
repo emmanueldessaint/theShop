@@ -5,14 +5,19 @@ import index from './index'
 import vuetify from './vuetify';
 import coreState from './coreState'
 import StarRating from 'vue-star-rating'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faShoppingCart, faUsers, faTruckMoving, faAward, faGlobeAfrica, faTrophy } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+library.add(faShoppingCart, faUsers, faTruckMoving, faAward, faGlobeAfrica, faTrophy)
 
 require('./bootstrap');
 
 window.Vue = require('vue').default;
 
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
-Vue.component('example-component')
+
 
 Vue.use(VueRouter)
 
