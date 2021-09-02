@@ -2387,6 +2387,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    ProductFilter: _ProductFilter_vue__WEBPACK_IMPORTED_MODULE_0__.default
+  },
   name: 'Products',
   component: {
     ProductFilter: _ProductFilter_vue__WEBPACK_IMPORTED_MODULE_0__.default
@@ -7331,7 +7334,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".filtres[data-v-6c2bf56c] {\n  background-color: red;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".filtres[data-v-6c2bf56c] {\n  background-color: red;\n  padding-top: 400px;\n  margin-top: 400px;\n  width: 500px;\n  height: 500px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -7571,7 +7574,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* @media only screen and (min-width: 1400px) {\r\n  .contenu{\r\n  margin-top:200px;\r\n  margin-left:auto;\r\n  margin-right:auto;\r\n  width:1200px;\r\n  }\r\n}\r\n@media only screen and (min-width: 1400px) {\r\n  .contenu{\r\n  margin-top:200px;\r\n  margin-left:auto;\r\n  margin-right:auto;\r\n  width:1200px;\r\n  }\r\n} */\n.background[data-v-57b394cf]{\r\n  background:rgb(253, 248, 248);\n}\n.contenu[data-v-57b394cf]{\r\n  margin-top:200px;\n}\n.one-product[data-v-57b394cf]{\r\n   margin:20px;\r\n   background-color:white;\n}\n.d-flex[data-v-57b394cf]{\r\n    display:flex;\r\n    flex-wrap: wrap;\n}\n.image-produit[data-v-57b394cf]{\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  width:200px;\r\n  height:200px;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* @media only screen and (min-width: 1400px) {\r\n  .contenu{\r\n  margin-top:200px;\r\n  margin-left:auto;\r\n  margin-right:auto;\r\n  width:1200px;\r\n  }\r\n}\r\n@media only screen and (min-width: 1400px) {\r\n  .contenu{\r\n  margin-top:200px;\r\n  margin-left:auto;\r\n  margin-right:auto;\r\n  width:1200px;\r\n  }\r\n} */\n.background[data-v-57b394cf]{\r\n  background:rgb(253, 248, 248);\n}\n.contenu[data-v-57b394cf]{\r\n  margin-top:200px;\n}\n.one-product[data-v-57b394cf]{\r\n   margin:20px;\r\n   background-color:white;\n}\n.d-flex[data-v-57b394cf]{\r\n    display:flex;\r\n    flex-wrap: wrap;\n}\n.image-produit[data-v-57b394cf]{\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  width:200px;\r\n  height:200px;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -41509,8 +41512,6 @@ var render = function() {
             [
               _c("span", [_vm._v(_vm._s(review.note))]),
               _vm._v(" "),
-              _c("span", [_vm._v("HELLO")]),
-              _vm._v(" "),
               _c("router-link", { attrs: { to: "/user/" + review.id_user } }, [
                 _c("h5", [_vm._v(_vm._s(review.title))])
               ]),
@@ -41559,7 +41560,7 @@ var render = function() {
         "v-container",
         { staticClass: "contenu" },
         [
-          _c("ProductFilter"),
+          _c("product-filter"),
           _vm._v(" "),
           _c(
             "v-row",
