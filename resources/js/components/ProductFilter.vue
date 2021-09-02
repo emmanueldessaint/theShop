@@ -13,11 +13,7 @@ export default {
 <style lang="scss" scoped>
 
 .filtres {
-    background-color: red;
-    padding-top:400px;
-    margin-top:400px;
-    width:500px;
-    height:500px;
+    
 }
 
 </style>

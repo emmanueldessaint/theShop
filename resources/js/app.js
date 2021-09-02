@@ -4,12 +4,13 @@ import routes from './routes'
 import index from './index'
 import vuetify from './vuetify';
 import coreState from './coreState'
-
+import StarRating from 'vue-star-rating'
 
 
 require('./bootstrap');
 
 window.Vue = require('vue').default;
+
 
 Vue.component('example-component')
 
@@ -24,5 +25,6 @@ const app = new Vue({
         index
     },
     vuetify,
-    store: coreState
+    store: coreState,
+    StarRating,
 });
