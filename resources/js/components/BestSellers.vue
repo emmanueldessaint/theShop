@@ -6,8 +6,8 @@
                   <span class="d-flex justify-center"><font-awesome-icon class="icone" icon="trophy" /></span>
                   <h2 v-if="product" class="d-flex justify-center mt-3">Nos clients achètent aussi</h2>
                   <div v-else>
-                    <h2 class="d-flex justify-center mt-5">Nos meilleures ventes</h2>
-                    <h4 class="d-flex justify-center">Découvrez les produits que nos clients adorent</h4> 
+                    <h2 class="d-flex justify-center mt-5 font-weight-light">Nos meilleures ventes</h2>
+                    <h4 class="d-flex justify-center font-weight-light">Découvrez les produits que nos clients adorent</h4> 
                   </div>                   
               </div>
           </v-col>
@@ -20,8 +20,8 @@
 
         <v-card >
           <h3 class="product-name mt-5 ml-3">{{ product.name }}</h3>          
-        
-          <h4 class="mt-5 ml-3 mb-3">{{ product.price }} €</h4>          
+          <div class="line-price"></div>
+          <h4 class="ml-3 mb-3 mt-3">{{ product.price }} €</h4>          
         </v-card>
         
       </v-col>
@@ -68,19 +68,26 @@ export default {
     width:250px;
 }
 .product-name{
-    height:60px;
+    height:40px;
 }
 .icone{
   font-size:250%;
-    color:rgb(211, 208, 34);
+    color:rgb(231, 228, 43);
     
 }
 h2{
   
-    color: rgb(54, 54, 54);
+    color: rgb(88, 88, 88);
 }
 h4{
   
-    color: rgb(54, 54, 54);
+    color: rgb(93, 93, 93);
+}
+.line-price{
+  width:90%;
+  margin-right:auto;
+  margin-left:auto;
+  height:1px;
+  background-color:rgb(226, 226, 226);
 }
 </style>

@@ -1,18 +1,15 @@
 <template>
     <div style="background-color:white;height:100vh">
         <v-container>
-            <p class="display-3 font-weight-light text-center pa-4">SHOPPING CART</p>
+            <p class="display-1 font-weight-light text-center pa-4">SHOPPING CART</p>
             <v-row>
                 <v-col :cols="12" md="8" sm="12">
                     <v-simple-table>
                         <template v-slot:default>
                             <thead>
                                 <tr>
-                                    <th class="text-left">ITEM</th>
-                                    <th class="text-left">ITEM NAME</th>
-                                    <th class="text-left">ITEM PRICE</th>
-                                    <th class="text-left">ITEM QUANTITY</th>
-                                    <th class="text-left">REMOVE</th>
+                                    <th class=" ml-5 text-left">ITEMS</th>
+                                    
                                 </tr>
                             </thead>
                             <tbody>
@@ -24,12 +21,13 @@
                                     <td>{{ item.price }}</td>
                                     <td class="">
                                         <span>{{ item.quantity }}</span>
-                                        <span>
-                                            <v-btn small class="ml-3 ajouter-retirer">+</v-btn>
-                                            <v-btn  small class="ajouter-retirer">-</v-btn>
+                                        <span class="">
+                                            <v-btn x-small class="ml-3 ajouter-retirer" @click="() => addQuantity(item)">+</v-btn>
+                                            <v-btn x-small class="ajouter-retirer" @click="() => substractQuantity(item)">-</v-btn>
                                         </span>
                                     </td>
-                                    <td><v-btn class="white--text" color="black" @click="() => removeItemFromCart(item)">X</v-btn></td>
+                                    <td>{{ multiplication(item)}}</td>
+                                    <td><v-btn small class="white--text" color="black" @click="() => removeItemFromCart(item)">X</v-btn></td>
                                 </tr>
                             </tbody>
                         </template>
@@ -56,7 +54,7 @@
                                     </td>
                                     <td class="" style="width:50px">{{ item.price }}</td>
                                     <td class="" style="width:50px">{{ item.quantity }}</td>
-                                    <td class="text-right" style="width:50px">{{ item.price }}*{{ item.quantity }}</td>
+                                    <td class="text-right" style="width:50px">{{ multiplication(item)}}</td>
                                 </tr>
                             </tbody>
                         </template>
@@ -72,20 +70,37 @@
 
 <script>
 export default {
+    data() {
+        return {
+            qprice: ''
+        }
+    },
     methods: {
         removeItemFromCart(item) {
             this.$store.dispatch('removeItemFromCart', item)
         },
         multiplication(item) {
-            var multiplication = item.price*item.quantity
-            
+            var multiplication = item.price*item.quantity            
+            return multiplication
+        },
+        addQuantity(item) {           
+            item.quantity ++
+            console.log(item.quantity)
+        },
+        substractQuantity(item) {
+            item.quantity --
+            console.log(item.quantity)
         }
-    }
+    },
+    
+
+    
 }
 </script>
 
 <style scoped>
 .ajouter-retirer{
-   
+    width:2px;
+
 }
 </style>

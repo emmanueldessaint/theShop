@@ -74,25 +74,7 @@ export default {
                 exist[0].quantity += this.quantity
             }
             const exist2 = this.$store.getters.getCartItems.filter(element => element.id === product.id)
-            console.log(exist2)
-            // let ceproduitestdanslepanier = false                           
-            // for (const element of this.$store.getters.getCartItems) {
-            //     if ( element.id === product.id ) {                   
-            //         ceproduitestdanslepanier = true                                                                                                                                     
-            //         element.quantity += product.quantity
-            //         console.log('la quantité de ce produit dans le panier est de' + ' ' + element.quantity)
-            //     }
-            // }            
-            // if (ceproduitestdanslepanier === false) {
-            //     this.$store.dispatch('addItemToCart', product)
-            //     console.log('ajouter au panier')
-            // }
-
-            
-            
-          
-           
-            
+            console.log(exist2)                                                                  
         },       
         ChangeQuantity(payload) {
             if (payload) {

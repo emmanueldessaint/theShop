@@ -6,10 +6,10 @@ import vuetify from './vuetify';
 import coreState from './coreState'
 import StarRating from 'vue-star-rating'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faShoppingCart, faUsers, faTruckMoving, faAward, faGlobeAfrica, faTrophy } from '@fortawesome/free-solid-svg-icons'
+import { faShoppingCart, faUser, faTruckMoving, faAward, faGlobeAfrica, faTrophy, faHeadset, faTruck } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faShoppingCart, faUsers, faTruckMoving, faAward, faGlobeAfrica, faTrophy)
+library.add(faShoppingCart, faUser, faTruckMoving, faAward, faGlobeAfrica, faTrophy, faHeadset, faTruck)
 
 require('./bootstrap');
 

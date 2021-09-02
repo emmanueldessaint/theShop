@@ -3,7 +3,7 @@
         <v-container>
             <v-row class="reviews">
                
-                    <v-col :cols="12" md="3" v-for="review in reviews" :key="review">  
+                    <v-col :cols="12" md="3" v-for="review in filteredReviews" :key="review">  
                         <router-link :to="`/user/${review.id_user}`" class="router-link-comment">   
                             <div v-if="review.note === '1'"><star-rating star-size="20" v-model="rating"></star-rating></div>
                             <div v-else-if="review.note === '2'"><star-rating star-size="20" v-model="rating"></star-rating></div>
@@ -25,8 +25,11 @@
 <script>
 import StarRating from 'vue-star-rating'
 export default {
-  name: 'TopReviews',
-  props: ['product'],
+    components: {
+        StarRating
+    },
+    name: 'TopReviews',
+    props: ['product'],
     data() {
         return {
             reviews: [],
@@ -52,9 +55,13 @@ export default {
     mounted() {
         this.getProductReviews()
     },
-    components: {
-        StarRating
-    }
+    
+    computed: {
+    filteredReviews: function () {
+     return this.reviews.slice(0, 4)
+     }
+  }
+
   
 
 }
