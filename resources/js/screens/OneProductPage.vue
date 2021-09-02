@@ -61,26 +61,36 @@ export default {
     },
     methods: {
         addItemToCart(product) {
-            this.product.quantity = this.quantity 
-            let n = 0     
+                                    
             
-            
-            for (const element of this.$store.getters.getCartItems) {
-                if ( element.id === product.id ) {
-                    
-                    n++         
-                    console.log(element.quantity)  
-                    console.log(product.quantity)                                                                                                           
-                    element.quantity += product.quantity
-                    console.log(element.quantity)  
-                    console.log('la quantité de ce produit dans le panier est de' + ' ' + element.quantity)
-                }
-            }
-            console.log("n =", + " " ,n)
-            if (n === 0) {
+            const exist = this.$store.getters.getCartItems.filter(element => element.id === product.id) 
+            console.log(exist)
+            if (exist.length === 0) {
+                this.product.quantity = this.quantity 
                 this.$store.dispatch('addItemToCart', product)
-                console.log('ajouter au panier')
+               
             }
+            else {
+                exist[0].quantity += this.quantity
+            }
+            const exist2 = this.$store.getters.getCartItems.filter(element => element.id === product.id)
+            console.log(exist2)
+            // let ceproduitestdanslepanier = false                           
+            // for (const element of this.$store.getters.getCartItems) {
+            //     if ( element.id === product.id ) {                   
+            //         ceproduitestdanslepanier = true                                                                                                                                     
+            //         element.quantity += product.quantity
+            //         console.log('la quantité de ce produit dans le panier est de' + ' ' + element.quantity)
+            //     }
+            // }            
+            // if (ceproduitestdanslepanier === false) {
+            //     this.$store.dispatch('addItemToCart', product)
+            //     console.log('ajouter au panier')
+            // }
+
+            
+            
+          
            
             
         },       
