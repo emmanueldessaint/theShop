@@ -67,21 +67,25 @@ export default {
 .oneProduct{
     width:250px;
 }
+.oneProduct:hover{
+    cursor:pointer;
+    
+}
 .product-name{
     height:40px;
 }
 .icone{
   font-size:250%;
-    color:rgb(231, 228, 43);
+    color:rgb(233, 185, 28);
     
 }
 h2{
   
-    color: rgb(88, 88, 88);
+    color: rgb(63, 63, 63);
 }
 h4{
   
-    color: rgb(93, 93, 93);
+    color: rgb(53, 53, 53);
 }
 .line-price{
   width:90%;

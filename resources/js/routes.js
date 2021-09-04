@@ -2,6 +2,7 @@ import HomePage from './screens/HomePage'
 import OneProductPage from './screens/OneProductPage'
 import ProductsPage from './screens/ProductsPage'
 import CartPage from './screens/CartPage.vue'
+import ConnectionPage from './screens/ConnectionPage.vue'
 
 export default {
     mode:'history',
@@ -26,6 +27,11 @@ export default {
         {
             path:'/cart',
             component: CartPage
+        }, 
+        
+        {
+            path:'/connection',
+            component: ConnectionPage
         },  
     ]
 }

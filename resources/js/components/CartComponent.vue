@@ -88,7 +88,9 @@ export default {
             console.log(item.quantity)
         },
         substractQuantity(item) {
-            item.quantity --
+           if (item.quantity > 1) {
+               item.quantity --
+           } 
             console.log(item.quantity)
         }
     },

@@ -93,7 +93,7 @@ export default {
 
 <style scoped>
 .background{
-  margin-top:60px;
+  
   padding-bottom:80px;
  background: rgb(0,0,0);
 background: linear-gradient(257deg, rgba(0,0,0,1) 0%, rgba(34,34,34,1) 47%, rgba(89,89,89,1) 100%);
@@ -131,5 +131,8 @@ background: linear-gradient(257deg, rgba(0,0,0,1) 0%, rgba(34,34,34,1) 47%, rgba
 }
 .margin-contact{
   margin-top:200px;
+  padding-top:20px;
+  background:rgb(245, 241, 241);
+  padding-bottom:40px;
 }
 </style>

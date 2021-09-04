@@ -7,8 +7,9 @@
                 <v-range-slider
                     @change="filterProductPrice()"
                     v-model="range"
-                    max="100"
-                    min="0"
+                    max="50"
+                    min="10"
+                    step="5"
                     thumb-label="always"
                 ></v-range-slider>
             </div>
@@ -21,9 +22,10 @@ export default {
     name: 'ProductFilter',
     data() {
         return  {
-            min: 0,
-            max: 100,
-            range: [0, 100],
+            
+            min: 10,
+            max: 50,
+            range: [10, 50],
             filteredProducts: [],
         }
     },
@@ -54,6 +56,7 @@ h4 {
     margin-right: 1rem;
 
 }
+
 
 
 </style>

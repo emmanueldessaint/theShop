@@ -15,7 +15,7 @@
           label="Search"
           :rules="rules">
           </v-text-field>
-          </div>
+        </div>
         <div class="d-flex justify-space-around mt-4">
           <h4><router-link class="router-link router-menu" to="/products">Nos produits</router-link></h4>
           <h4><router-link class="router-link router-menu" to="/products">Nos offres</router-link></h4>
@@ -24,8 +24,8 @@
         </div>
       </div>
       <div class="d-flex flex-row ml-5">
-        <span class="ml-5"><font-awesome-icon icon="user" /></span>
-        <h5><router-link class="router-link router-menu ml-5" to="/cart"><font-awesome-icon icon="shopping-cart" /></router-link></h5>
+        <router-link class="router-link router-menu ml-5" to="/connection"><font-awesome-icon class="icon-navigator" icon="user" /></router-link>
+        <router-link class="router-link router-menu ml-5" to="/cart"><font-awesome-icon class="icon-navigator icon-cart" icon="shopping-cart" /></router-link>
       </div>
   </div>
 </template>
@@ -81,7 +81,14 @@ export default {
 }
 .text-field-input{
   position:relative;
-  top:10px;
-  
+  top:10px;  
+}
+.icon-navigator{
+  font-size:170%;
+  color:rgb(104, 104, 104);
+  margin-top:20px;
+}
+.icon-cart{
+  margin-left:50px;
 }
 </style>
