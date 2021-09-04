@@ -2,33 +2,38 @@
   <div class="contenu">
       <v-container>
         <v-row>
-            <v-col>
-                <h3>Already Customer ?</h3>
-                   
-                <v-text-field
-            label="Your email address"
-            outlined
-            dense
-            class="mt-5"
-          ></v-text-field>
-          <v-text-field
-            label="Your password"
-            outlined
-            dense
-            type="password"
-            class="mt-3"
-          ></v-text-field>
-                  
-                <input>
-                <v-btn class="d-flex justify-center connect">Connect</v-btn>
-                <div class="ligne-grise mt-4"></div>
-                <h5 class="mt-3">You forget your password ?</h5>
-        
+            <v-col class="">
+                <div class="mr-5 ml-5">
+                    <h3 class="ml-2">Already Customer ?</h3>
+                    
+                    <v-text-field
+                        label="Your email address"
+                        outlined
+                        dense
+                        class="mt-5 "
+                    ></v-text-field>
+                    <v-text-field
+                        label="Your password"
+                        outlined
+                        dense
+                        type="password"
+                        class="mt-3 "
+                    ></v-text-field>                                  
+                    <v-btn  block color="success" class="d-flex justify-center connect ">CONNECT</v-btn>
+                    <div class="ligne-grise mt-4"></div>
+                    <h5 class="mt-3">Forgot your password ?</h5>
+                </div>
             </v-col>
 
-            <v-col>
-                <h3>New customer ?</h3>
-                <h3>Create my account</h3>
+            <v-col class="  d-flex align-center">
+                <div class="div-create-account ">
+                    <div class="mt-5 ml-5 mr-5">
+                        <h3 class="d-flex justify-center mt-5">New customer ?</h3>
+                        <router-link class="router-link router-menu ml-5" to="/signup"><v-btn block  color="white" class="d-flex justify-center create-account mt-5">Create my account</v-btn></router-link>
+                        
+                        <p class="paragraph-create mt-5 ml-3 mr-3 d-flex">Thanks to your PowerBike account, access our private sales, take advantage of our good deals and easily follow your orders</p>
+                    </div>
+               </div>
             </v-col>
         </v-row>
       </v-container>
@@ -56,7 +61,25 @@ export default {
     background-color: rgb(190, 190, 190);
 }
 .connect{
-    background-color: rgb(85, 26, 26);
-    color:white;
+   color:white;
+             
+}
+.text-connect{
+    text-align:center;
+}
+.div-create-account{
+    border:solid 1px rgb(236, 236, 236);
+    width:100%;
+    height:80%;
+}
+.paragraph-create{
+    font-weight:300;
+    font-size:80%;
+    text-align: center;
+}
+.marge{
+    margin-left:auto;
+    margin-right:auto;
+    width:8
 }
 </style>

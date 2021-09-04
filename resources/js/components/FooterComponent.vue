@@ -9,8 +9,8 @@
         </v-col>
           <v-col class="col-2 bord-center">
             <div class="d-flex justify-center"><font-awesome-icon class="icone" icon="truck" /></div>
-            <h4 class="d-flex justify-center mt-5">Livraison gratuite</h4>
-            <h5 class="d-flex justify-center">dès 30€ d'achat en France</h5>
+            <h4 class="d-flex justify-center mt-5">Free delivery</h4>
+            <h5 class="d-flex justify-center">starting from 50 € purchase.</h5>
         </v-col>
         <v-col class="col-2">
             <div class="d-flex justify-center"><font-awesome-icon class="icone" icon="headset" /></div>
