@@ -80,7 +80,7 @@
                         <router-link class="router-link router-menu ml-5" to="/signup"><v-btn block text color="white" class="d-flex justify-center create-account mt-5">Create my account</v-btn></router-link>
                         <div class="grey-line mt-4 mb-4"></div>
                         <div class="d-flex justify-center">
-                            <h5>You already have an account ? <router-link to="/login">Connect</router-link></h5>
+                            <h5>You already have an account ? <router-link class="router-none" to="/login">Connect</router-link></h5>
                         </div>
                     </v-col>
                 </v-row>
@@ -142,5 +142,10 @@ data () {
     margin-left:auto;
     margin-right:auto;
     background-color: rgb(202, 202, 202);
+}
+.router-none{
+    text-decoration: underline;
+    color:inherit;
+
 }
 </style>

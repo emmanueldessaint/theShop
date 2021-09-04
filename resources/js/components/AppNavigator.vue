@@ -26,15 +26,29 @@
       <div class="d-flex flex-row ml-5">
         <router-link class="router-link router-menu ml-5" to="/login"><font-awesome-icon class="icon-navigator" icon="user" /></router-link>
         <router-link class="router-link router-menu ml-5" to="/cart"><font-awesome-icon class="icon-navigator icon-cart" icon="shopping-cart" /></router-link>
+        <v-btn @click="() => getYPosition()">Click me</v-btn>
       </div>
   </div>
 </template>
 
 <script>
 export default {
+    data() {
+      return {
+        scrollBar: ""
+      }
+    },
     methods: {
         removeItemFromCart(item) {
             this.$store.dispatch('removeItemFromCart', item)
+        },
+        
+    },
+    computed: {
+      getYPosition() {
+        var top  = window.pageYOffset || document.documentElement.scrollTop
+        console.log(top)
+        // return top;
         }
     }
 }
@@ -43,7 +57,7 @@ export default {
 <style scoped>
 .barre-recherche{
   border-radius:30px;
-  border: solid 1px rgb(214, 214, 214);
+  
   height:50px;
   width:80%;
   display:flex;

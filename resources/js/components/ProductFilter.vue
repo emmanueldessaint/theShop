@@ -1,20 +1,29 @@
 <template>
-    <div class="filters">
-        <h4>Filtres</h4>
-        <div>
-            <p class="filters-title mb-10">Par prix</p>
-            <div class="filter-price">
-                <v-range-slider
-                    @change="filterProductPrice()"
-                    v-model="range"
-                    max="50"
-                    min="10"
-                    step="5"
-                    thumb-label="always"
-                ></v-range-slider>
-            </div>
+<div>
+    
+        <div class="filters">
+            
+        
+                
+                <div class="filter-price">
+                    <v-range-slider
+                        @change="filterProductPrice()"
+                        v-model="range"
+                        max="50"
+                        min="10"
+                        step="5"
+                        thumb-label="always"
+                        dense
+                    ></v-range-slider>
+                    <h5 class="d-flex justify-center">Filter price</h5>
+                </div>
+            
         </div>
-    </div>
+        <div>
+            
+        </div>
+    
+</div>
 </template>
 
 <script>
@@ -48,15 +57,15 @@ h4 {
 }
 
 .filters {
-    background-color: rgb(226, 226, 255);
-    border-radius: 3px;
-    height: 70vh;
+    // background-color: rgb(226, 226, 255);
+    margin-bottom:-17px;
+    
     width: 15rem;
-    padding: 1rem;
-    margin-right: 1rem;
-
 }
-
+h5{
+    position:relative;
+    bottom:20px;
+}
 
 
 </style>

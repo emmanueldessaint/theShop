@@ -22,9 +22,9 @@
       <v-row class="mt-5">
           <best-sellers />
       </v-row>
-      <!-- <v-row class="mt-15">
+      <v-row class="mt-15">
           <product-reviews />
-      </v-row> -->
+      </v-row>
       
       
 

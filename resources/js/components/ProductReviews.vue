@@ -1,8 +1,7 @@
 <template>  
     <div>                       
         <v-container>
-            <v-row class="reviews">
-               
+            <v-row v-if="reviews.length > 3" class="reviews">               
                     <v-col :cols="12" md="3" v-for="review in filteredReviews" :key="review">  
                         <router-link :to="`/user/${review.id_user}`" class="router-link-comment">   
                             <div v-if="review.note === '1'"><star-rating star-size="20" v-model="rating"></star-rating></div>
@@ -14,8 +13,11 @@
                             <p class="mt-5" v-if="review.description.length >0>100">{{ review.description }}</p>
                             <p class="mt-5" v-else>{{ review.description.substring(0,100) + "..." }}</p>
                         </router-link>
-                    </v-col>
-                
+                    </v-col>               
+            </v-row>
+            <v-row v-else>
+
+                Il n'y a pas assez d'avis
             </v-row>
         </v-container>
     </div>
@@ -41,6 +43,7 @@ export default {
             axios.get('http://localhost:8000/api/product/' + this.product.id)
             .then((res) => {
                 this.reviews = res.data
+                console.log(this.reviews)
             })
             .catch((err) => {
                 console.log(err)
