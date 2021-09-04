@@ -24,7 +24,7 @@
         </div>
       </div>
       <div class="d-flex flex-row ml-5">
-        <router-link class="router-link router-menu ml-5" to="/connection"><font-awesome-icon class="icon-navigator" icon="user" /></router-link>
+        <router-link class="router-link router-menu ml-5" to="/login"><font-awesome-icon class="icon-navigator" icon="user" /></router-link>
         <router-link class="router-link router-menu ml-5" to="/cart"><font-awesome-icon class="icon-navigator icon-cart" icon="shopping-cart" /></router-link>
       </div>
   </div>

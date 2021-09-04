@@ -2,7 +2,7 @@
   <div class="contenu">
       <v-container>
         <v-row>
-            <v-col class="">
+            <v-col xs="10" sm="8" md="6" class="">
                 <div class="mr-5 ml-5">
                     <h3 class="ml-2">Already Customer ?</h3>
                     
@@ -19,17 +19,17 @@
                         type="password"
                         class="mt-3 "
                     ></v-text-field>                                  
-                    <v-btn  block color="success" class="d-flex justify-center connect ">CONNECT</v-btn>
+                    <v-btn  block text color="white" class="d-flex justify-center connect ">CONNECT</v-btn>
                     <div class="ligne-grise mt-4"></div>
                     <h5 class="mt-3">Forgot your password ?</h5>
                 </div>
             </v-col>
 
-            <v-col class="  d-flex align-center">
+            <v-col xs="10" sm="8" md="6" class="d-flex align-center">
                 <div class="div-create-account ">
                     <div class="mt-5 ml-5 mr-5">
                         <h3 class="d-flex justify-center mt-5">New customer ?</h3>
-                        <router-link class="router-link router-menu ml-5" to="/signup"><v-btn block  color="white" class="d-flex justify-center create-account mt-5">Create my account</v-btn></router-link>
+                        <router-link class="router-link router-menu ml-5" to="/signup"><v-btn block  outlined color="black" class="d-flex justify-center  mt-5">Create my account</v-btn></router-link>
                         
                         <p class="paragraph-create mt-5 ml-3 mr-3 d-flex">Thanks to your PowerBike account, access our private sales, take advantage of our good deals and easily follow your orders</p>
                     </div>
@@ -51,7 +51,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .contenu{
     margin-top:200px;
 }
@@ -61,8 +61,8 @@ export default {
     background-color: rgb(190, 190, 190);
 }
 .connect{
-   color:white;
-             
+   
+    background-color: rgb(85, 26, 26);
 }
 .text-connect{
     text-align:center;
@@ -77,9 +77,5 @@ export default {
     font-size:80%;
     text-align: center;
 }
-.marge{
-    margin-left:auto;
-    margin-right:auto;
-    width:8
-}
+
 </style>

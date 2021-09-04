@@ -31,7 +31,7 @@ export default {
         }, 
         
         {
-            path:'/connection',
+            path:'/login',
             component: ConnectionPage
         },  
 
