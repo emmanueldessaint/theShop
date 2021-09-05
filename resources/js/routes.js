@@ -4,6 +4,7 @@ import ProductsPage from './screens/ProductsPage'
 import CartPage from './screens/CartPage.vue'
 import ConnectionPage from './screens/ConnectionPage.vue'
 import CreateAccountPage from './screens/CreateAccountPage'
+import ForgotPasswordPage from './screens/ForgotPasswordPage'
 
 export default {
     mode:'history',
@@ -39,5 +40,10 @@ export default {
             path:'/signup',
             component: CreateAccountPage
         },  
+
+        {
+            path:'/forgot-password',
+            component: ForgotPasswordPage
+        },
     ]
 }

@@ -1,7 +1,7 @@
 <template>
     <v-app>
         <header-component />
-        <app-navigator />       
+        <sticky-navigator />       
         <router-view></router-view>
         <footer-component />
         
@@ -11,12 +11,12 @@
 
 <script>
 import HeaderComponent from './components/navigation/HeaderComponent.vue'
-import AppNavigator from './components/AppNavigator.vue'
+import StickyNavigator from './components/navigation/StickyNavigator.vue'
 import HomePage from './screens/HomePage.vue'
 import FooterComponent from './components/FooterComponent.vue'
 
 export default {
-    components: { HomePage, AppNavigator, FooterComponent, HeaderComponent},
+    components: { HomePage, StickyNavigator, FooterComponent, HeaderComponent},
    
 }
 </script>

@@ -45,13 +45,13 @@
 </template>
 
 <script>
-import AppNavigator from '../components/AppNavigator.vue'
+import StickyNavigator from '../components/navigation/StickyNavigator.vue'
 import ProductReviews from '../components/ProductReviews.vue'
 import BestSellers from '../components/BestSellers.vue'
 import CaracteristicsProductComponent from '../components/CaracteristicsProductComponent.vue'
 
 export default {
-  components: { AppNavigator, ProductReviews, BestSellers, CaracteristicsProductComponent },
+  components: { StickyNavigator, ProductReviews, BestSellers, CaracteristicsProductComponent },
     props: ['product'],
     data() {
         return {
@@ -90,7 +90,7 @@ export default {
 
 <style scoped>
 .contenu{
-    margin-top:100px;
+   
 }
 .product-border{
     margin-top:100px;

@@ -21,7 +21,7 @@
                     ></v-text-field>                                  
                     <v-btn  block text color="white" class="d-flex justify-center connect ">CONNECT</v-btn>
                     <div class="ligne-grise mt-4"></div>
-                    <h5 class="mt-3">Forgot your password ?</h5>
+                    <h5 class="mt-3">Forgot <router-link to="/forgot-password"  class="router-link-password">your password ?</router-link></h5>
                 </div>
             </v-col>
 
@@ -53,7 +53,7 @@ export default {
 
 <style scoped>
 .contenu{
-    margin-top:200px;
+    margin-top:100px;
 }
 .ligne-grise{
     width:100%;
@@ -77,5 +77,8 @@ export default {
     font-size:80%;
     text-align: center;
 }
-
+.router-link-password{
+    text-decoration: underline;
+    color:inherit;
+}
 </style>

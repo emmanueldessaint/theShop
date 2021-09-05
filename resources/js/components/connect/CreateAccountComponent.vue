@@ -118,7 +118,7 @@ data () {
 
 <style scoped>
 .contenu{
-    margin-top:200px;
+    margin-top:100px;
 }
 .marge{
     margin-left:auto;
