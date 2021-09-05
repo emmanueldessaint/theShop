@@ -76,6 +76,11 @@ export default {
     height:350px;
     margin:10px;
 }
+.one-product:hover{   
+   cursor:pointer;
+   opacity:0.6;
+   
+}
 .img-product{
     width:300px;
     height:300px;

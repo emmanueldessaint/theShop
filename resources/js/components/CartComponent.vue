@@ -23,7 +23,7 @@
                                         <span>{{ item.quantity }}</span>
                                         <span class="">
                                             <v-btn x-small class="ml-3 ajouter-retirer" @click="() => addQuantity(item)">+</v-btn>
-                                            <v-btn x-small class="ajouter-retirer" @click="() => substractQuantity(item)">-</v-btn>
+                                            <v-btn x-small class="ajouter-retirer" @click="() => substractOneQuantity(item)">-</v-btn>
                                         </span>
                                     </td>
                                     <td>{{ multiplication(item)}}</td>
@@ -83,15 +83,15 @@ export default {
             var multiplication = item.price*item.quantity            
             return multiplication
         },
-        addQuantity(item) {           
-            item.quantity ++
-            console.log(item.quantity)
+        addQuantity(item) {  
+            this.$store.dispatch('addOneQuantity', item)
+            
         },
-        substractQuantity(item) {
-           if (item.quantity > 1) {
-               item.quantity --
+        substractOneQuantity(item) {
+            if (item.quantity > 1) {
+                this.$store.dispatch('substractOneQuantity', item)
            } 
-            console.log(item.quantity)
+            
         }
     },
     

@@ -23,7 +23,7 @@
           <best-sellers />
       </v-row>
       <v-row class="mt-15">
-          <product-reviews />
+          <all-reviews />
       </v-row>
       
       
@@ -34,10 +34,10 @@
 
 <script>
 import BestSellers from '../components/BestSellers.vue'
-import ProductReviews from './ProductReviews.vue'
+import AllReviews from '../components/reviews/AllReviews.vue'
 
 export default {
-components: {  BestSellers, ProductReviews },
+components: {  BestSellers, AllReviews },
     
   }
 

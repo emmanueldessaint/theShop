@@ -9,10 +9,30 @@ export default new Vuex.Store({
         storage: window.sessionStorage
     })],
     state: {
+        
         cartItems: []
     },
     mutations: {
         addItemToCart(state, payload) {
+          
+            let cartItems = state.cartItems
+            cartItems.push(payload)
+            state.cartItems = cartItems
+        },
+        addOneQuantity(state, payload) {
+            
+            let itemToBeRemoved = payload
+            state.cartItems = state.cartItems.filter((item) => itemToBeRemoved.id !== item.id)
+            payload.quantity ++
+            let cartItems = state.cartItems
+            cartItems.push(payload)
+            state.cartItems = cartItems
+        },
+        substractOneQuantity(state, payload) {
+            
+            let itemToBeRemoved = payload
+            state.cartItems = state.cartItems.filter((item) => itemToBeRemoved.id !== item.id)
+            payload.quantity --
             let cartItems = state.cartItems
             cartItems.push(payload)
             state.cartItems = cartItems
@@ -30,6 +50,12 @@ export default new Vuex.Store({
     actions: {
         addItemToCart(state, payload) {
             state.commit('addItemToCart', payload)
+        },
+        addOneQuantity(state, payload) {
+            state.commit('addOneQuantity', payload)
+        },
+        substractOneQuantity(state, payload) {
+            state.commit('substractOneQuantity', payload)
         },
         removeItemFromCart(state, payload) {
             state.commit('removeItemFromCart', payload)

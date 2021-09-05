@@ -46,7 +46,7 @@
 
 <script>
 import StickyNavigator from '../components/navigation/StickyNavigator.vue'
-import ProductReviews from '../components/ProductReviews.vue'
+import ProductReviews from '../components/reviews/ProductReviews.vue'
 import BestSellers from '../components/BestSellers.vue'
 import CaracteristicsProductComponent from '../components/CaracteristicsProductComponent.vue'
 
@@ -60,21 +60,15 @@ export default {
         }
     },
     methods: {
-        addItemToCart(product) {
-                                    
-            
+        addItemToCart(product) {                                                
             const exist = this.$store.getters.getCartItems.filter(element => element.id === product.id) 
-            console.log(exist)
             if (exist.length === 0) {
                 this.product.quantity = this.quantity 
-                this.$store.dispatch('addItemToCart', product)
-               
+                this.$store.dispatch('addItemToCart', product)               
             }
             else {
                 exist[0].quantity += this.quantity
-            }
-            const exist2 = this.$store.getters.getCartItems.filter(element => element.id === product.id)
-            console.log(exist2)                                                                  
+            }                                                                             
         },       
         ChangeQuantity(payload) {
             if (payload) {
@@ -89,9 +83,7 @@ export default {
 </script>
 
 <style scoped>
-.contenu{
-   
-}
+
 .product-border{
     margin-top:100px;
     margin-left: auto;
@@ -100,9 +92,7 @@ export default {
     
     /* background-color:rgb(219, 219, 219); */
 }
-.top-right-product{
-    /* background-color:rgb(240, 240, 240); */
-}
+
 .image-produit{
     height:500px;
     width:500px;

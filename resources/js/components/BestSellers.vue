@@ -6,8 +6,8 @@
                   <span class="d-flex justify-center"><font-awesome-icon class="icone" icon="trophy" /></span>
                   <h2 v-if="product" class="d-flex justify-center mt-3">Nos clients achètent aussi</h2>
                   <div v-else>
-                    <h2 class="d-flex justify-center mt-5 font-weight-light">Nos meilleures ventes</h2>
-                    <h4 class="d-flex justify-center font-weight-light">Découvrez les produits que nos clients adorent</h4> 
+                    <h2 class="d-flex justify-center mt-5 font-weight-light">Our best sellers</h2>
+                    <h4 class="d-flex justify-center font-weight-light">Discover the products our customers love</h4> 
                   </div>                   
               </div>
           </v-col>

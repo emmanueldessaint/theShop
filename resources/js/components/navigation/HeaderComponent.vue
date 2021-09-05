@@ -1,6 +1,10 @@
 <template>
     <div class="d-flex justify-center pt-5">
-        <router-link class="router-link router-menu nav-selections mt-5" to="/"><h2>PowerBike</h2></router-link>
+        <router-link class="router-link router-menu nav-selections mt-5" to="/">
+            <h2>PowerBike</h2>
+            
+        </router-link>
+        
         <div class="div-search mt-3">
             <v-text-field
             label="Search"
@@ -46,5 +50,8 @@ h2{
 .router-menu{
     text-decoration: none;
     color:inherit;
+}
+.logo-bike{
+    width:160px;
 }
 </style>
