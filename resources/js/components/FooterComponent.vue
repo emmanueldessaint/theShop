@@ -132,7 +132,7 @@ background: linear-gradient(257deg, rgba(0,0,0,1) 0%, rgba(34,34,34,1) 47%, rgba
 .margin-contact{
   margin-top:200px;
   padding-top:20px;
-  background:rgb(245, 241, 241);
+  background-color: #f0f0f0;
   padding-bottom:40px;
 }
 </style>

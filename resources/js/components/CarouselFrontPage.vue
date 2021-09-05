@@ -16,7 +16,7 @@
       return {
         items: [
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+            src: 'assets/background/vtt-1.jpg',
           },
           {
             src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
@@ -35,7 +35,7 @@
 
 <style>
 .carousel{
-    margin-top:120px;
+    
 }
 .img-carousel{
     height:110%;
