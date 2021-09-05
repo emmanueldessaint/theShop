@@ -19,13 +19,13 @@
             src: 'assets/background/vtt-1.jpg',
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+            src: 'assets/background/vtt-2.jpg',
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+            src: 'assets/background/vtt-3.jpg',
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+            src: 'assets/background/vtt-4.png',
           },
         ],
       }
@@ -38,6 +38,6 @@
     
 }
 .img-carousel{
-    height:110%;
+    height:200%;
 }
 </style>

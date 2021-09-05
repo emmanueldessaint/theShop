@@ -1,6 +1,6 @@
 <template>  
     <div>                       
-        <v-container>
+        <v-container v-if="product">
             <v-row v-if="reviews.length > 3" class="reviews">               
                     <v-col :cols="12" md="3" v-for="review in filteredReviews" :key="review">  
                         <router-link :to="`/user/${review.id_user}`" class="router-link-comment">   
@@ -19,6 +19,12 @@
 
                 Il n'y a pas assez d'avis
             </v-row>
+            
+        </v-container>
+        <v-container v-else>
+            HELLO
+            
+            <span v-for="allreview in allreviews" :key="allreview">HELLO</span>
         </v-container>
     </div>
 </template>
@@ -35,6 +41,7 @@ export default {
     data() {
         return {
             reviews: [],
+            allreviews: [],
             rating: "",            
         }
     },
@@ -49,6 +56,16 @@ export default {
                 console.log(err)
             })
         },
+        getAllReviews() {
+            axios.get('http://localhost:8000/api/reviews')
+            .then((res) => {
+                this.allreviews = res.data
+                console.log(this.allreviews)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+        },
         ratingNumber(review) {
             let rating = review.note
         }
@@ -57,6 +74,7 @@ export default {
     
     mounted() {
         this.getProductReviews()
+        this.getAllReviews()
     },
     
     computed: {

@@ -23,7 +23,9 @@ Route::get('products', [ProductController::class, 'index']);
 
 Route::get('bestsellers', [ProductController::class, 'best']);
 
-Route::get('products/{id}', [ProductController::class, 'show']);
+// Route::get('products/{id}', [ProductController::class, 'show']);
 
 Route::get('product/{id}', [ProductController::class, 'reviews']);
+
+Route::get('reviews', [ProductController::class, 'allreviews']);
 

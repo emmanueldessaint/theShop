@@ -67,6 +67,15 @@ class ProductController extends Controller
         ]);
     }
 
+    public function allreviews() 
+    {
+        $allreviews = ProductReviews::where('note', '>', 3)->get();
+
+        
+            return json_encode($allreviews);
+        
+    }
+
     public function reviews($id) 
     {
         $reviews = ProductReviews::where('id_product', '=', $id)->get();

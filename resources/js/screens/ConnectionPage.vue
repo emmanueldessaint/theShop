@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import ConnectionComponent from '../components/ConnectionComponent.vue'
+import ConnectionComponent from '../components/connect/ConnectionComponent.vue'
 export default {
     components: {ConnectionComponent}
 }

@@ -4,7 +4,7 @@
         <div class="div-search mt-3">
             <v-text-field
             label="Search"
-            placeholder="Dense & Rounded"
+            placeholder="parts & accessories"
             filled
             rounded
             dense
